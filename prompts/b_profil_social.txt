@@ -1,0 +1,222 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Profil Social
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+SEXE_DEM : Sexe du demandeur
+1 - Homme
+2 - Femme
+X - Indéterminé (prénom mixte ou étranger)
+
+DA_NAIS_DEM : Date de naissance du demandeur au format "aaaa-mm-jj"
+
+PAYS_NAIS_DEM : Pays de naissance du demandeur selon la norme internationale de codification des pays ISO 3166-1 (code numérique à 3 chiffres obligatoires). Par exemple : France = "250", Algérie = "012", Maroc = "504", Tunisie = "788", Portugal = "620", Turquie = "792", Sénégal = "686", Côte d'Ivoire = "384", Mali = "466", Cameroun = "120", Guinée = "324", Roumanie = "642", Comores = "174", République Démocratique du Congo = "180", Espagne = "724". Mettre "XXX" pour non renseigné.
+
+NATIO_DEM : Nationalité du demandeur
+1 - Français
+2 - Etranger
+3 - Double nationalité (FR) (français/étranger)
+X - Non renseigné
+
+DEPT_RES_DEM : Département de résidence du demandeur
+Renseigner le numéro du département, sur 3 caractères pour les dom + 999 pour étranger et XXX pour non renseigné
+
+STATUT_PRO_DEM : Statut professionnel du demandeur
+1 - en emploi
+2 - sans emploi (chômeur ou en recherche)
+3 - à la retraite
+4 - étudiant
+9 - autre (au foyer, rentier….)
+X - Non Renseigné
+
+REVENU_DEM : Revenus mensuels du demandeur : * revenu du travail (salaire …) + prestations sociales (chômage - CAF- RSA - retraite …)
+
+LOGT_TYPE_DEM :	Type de logement occupé par le demandeur au moment de l’audience (à défaut, adresse indiquée sur la décision)
+1 - logement du couple (commun avec l’autre partie)
+2 - logement séparé indépendant
+3 - hébergement provisoire (ami, famille, foyer)
+4 - A élu domicile chez avocat, procureur ou association
+9 - autre (prison, hopital …)
+X - Non Renseigné
+
+SEXE_DEF : Sexe du défendeur
+1 - Homme
+2 - Femme
+X - Indéterminé (prénom mixte ou étranger)
+
+DA_NAIS_DEF : Date de naissance du défendeur au format "aaaa-mm-jj"
+
+PAYS_NAIS_DEF : Pays de naissance du défendeur selon la norme internationale de codification des pays ISO 3166-1 (code numérique à 3 chiffres obligatoires). Par exemple : France = "250", Algérie = "012", Maroc = "504", Tunisie = "788", Portugal = "620", Turquie = "792", Sénégal = "686", Côte d'Ivoire = "384", Mali = "466", Cameroun = "120", Guinée = "324", Roumanie = "642", Comores = "174", République Démocratique du Congo = "180", Espagne = "724". Mettre "XXX" pour non renseigné.
+
+VILLE_NAIS_DEF : Ville de naissance du défendeur né en France selon le code commune
+Les codes communes en France sont des identifiants uniques attribués par l'INSEE aux communes. Chaque code est constitué de 5 caractères, où les deux premiers représentent le code du département et les trois suivants le code de la commune.
+
+VILLE_NAIS_ETR_DEF : Ville de naissance du défendeur né à l’étranger
+
+NATIO_DEF :	Nationalité du défendeur
+1 - Français
+2 - Etranger
+3 - Double nationalité (FR) (français/étranger)
+X - Non renseigné
+
+DEPT_RES_DEF : Département de résidence du défendeur
+Renseigner le numéro du département, sur 3 caractères pour les dom + 999 pour étranger et XXX pour non renseigné
+	
+STATUT_PRO_DEF : Statut professionnel du défendeur
+1 - en emploi
+2 - sans emploi (chômeur ou en recherche)
+3 - à la retraite
+4 - étudiant
+9 - autre (au foyer, rentier….)
+X - Non Renseigné
+
+REVENU_DEF : Revenus mensuels du défendeur : * revenu du travail (salaire …) + prestations sociales (chômage - CAF- RSA - retraite …)
+	
+LOGT_TYPE_DEF : Type de logement occupé par le défendeur au moment de l’audience (à défaut, adresse indiquée sur la décision)
+1 - logement du couple (commun avec l’autre partie)
+2 - logement séparé indépendant
+3 - hébergement provisoire (ami, famille, foyer)
+4 - A élu domicile chez avocat, procureur ou association
+9 - autre (prison, hopital …)
+X - Non Renseigné	
+
+STATUT_JUR_COUPLE : Statut juridique du couple au moment des faits
+11 - Mariés
+12 - Pacsés
+13 - Concubins
+21 - Divorcés
+22 - Dépacsés
+23 - Séparés
+31 - Couple n’ayant jamais cohabité
+99 - Autre
+XX - Non précisé
+
+AN_MARIAGE_COUPLE : Année de mariage
+
+AN_PACS_COUPLE : Année du pacs
+
+DIVORCE_ENCOURS_COUPLE : Il est fait mention d'une procédure de divorce ou de dissolution de PACS en cours
+0 - NON (ou non précisé)
+1 - OUI
+	
+ENFT : Le couple a-t-il un ou des enfants communs
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+ENFT_NB	: Nombre d'enfants issus du couple
+
+ENFT_MIN : Le couple a-t-il des enfants mineurs
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+ENFT_MIN_NB : Nombre d'enfants mineurs issus du couple
+
+ENFT_MAJ : Le couple a-t-il des enfants majeurs
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+ENFT_MAJ_NB : Nombre d'enfants majeurs issus du couple
+
+ENFT_MINI_AN_NAIS : Année de naissance de l'enfant du couple ou du plus jeune si plusieurs
+
+ENFT_MAXI_AN_NAIS : Année de naissance de l'enfant le plus âgé issu du couple
+
+ENFT_GROSSESSE : Il est fait mention d'une grossesse en cours
+0 - NON (ou non précisé)
+1 - OUI
+
+ENFT_HORS_UNION_DEM : Il est fait mention d'enfant(s) du demandeur nés en dehors de cette union
+0 - NON (ou non précisé)
+1 - OUI
+
+ENFT_MESURE_SOCIOEDUC : Un ou plusieurs enfants font ou ont fait l'objet de mesures socio-éducatives (AEMO-ASE) ou de mesures d'investigation (RRSE-MJIE) ou d'une mesure d'assistance éducative
+0 - NON (ou non précisé)
+1 - OUI
+
+ENFT_PROC_JAF : Il est fait mention d'une procédure en cours auprès du JAF au sujet des enfants du couple (divorce ou enfants)
+0 - NON (ou non précisé)
+1 - OUI
+	
+ADDICT_STUP_DEM : Le demandeur consomme des stupéfiants
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+ADDICT_ALCOOL_DEM : Le demandeur connaît des problèmes d'alcool
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+PATHO_PSY_DEM : Le demandeur souffre d'une pathologie psychiatrique
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+DEPRESSION_DEM : Le demandeur est en dépression ou a fait une tentative de suicide
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+	
+ADDICT_STUP_DEF : Le défendeur consomme des stupéfiants
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+ADDICT_ALCOOL_DEF : Le défendeur connaît des problèmes d'alcool
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+PATHO_PSY_DEF : Le défendeur souffre d'une pathologie psychiatrique
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+DEPRESSION_DEF : Le défendeur est en dépression ou a fait une tentative de suicide
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info

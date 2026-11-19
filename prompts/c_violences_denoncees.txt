@@ -1,0 +1,185 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Violences dénoncées
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+le demandeur dénonce :
+
+PHYS_DEM_DENONC : Des violences physiques sur le demandeur (coups de poing, pied, tête, gifle, etc.) avec ou sans arme
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_DEM_DENONC :	Des menaces de violences physiques envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_MORT_DEM_DENONC : S’agit-il de menaces de mort envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ARME_DEM_DENONC : S’agit-il de menaces avec usage d’une arme (blanche ou à feu)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_DEM_DENONC : Des violences psychologiques sur le demandeur (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_HARCEL_DEM_DENONC : S’agit-il d’un harcèlement téléphonique ou via réseaux sociaux
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_CONTROL_DEM_DENONC : S’agit-il de comportements de contrôle de la part du défendeur (autoritarisme, restriction de liberté, sélection des fréquentations, des vêtements, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_DEM_DENONC : Des violences sexuelles sur le demandeur (viols et/ou autres agressions sexuelles)
+0 – NON (ou non précisé)
+1 – OUI
+
+ECONOMIC_DEM_DENONC : Des violences économiques (vol d'argent, retrait de la carte, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VOLPAPIER_DEM_DENONC : Des vols de papiers d'identité et/ou de titre de séjour et/ou permis de conduire
+0 – NON (ou non précisé)
+1 – OUI
+
+INTRUSION_DEM_DENONC : Des intrusions ou tentatives d'intrusion sur l'actuel lieu de résidence du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+DEGRAD_DEM_DENONC : Des dégradations matérielles (véhicule, portable, meubles, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PHYS_ENFT_DENONC : Des violences physiques sur ses enfants (coups de poing, pied, tête, gifle, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ENFT_DENONC : Des menaces de violences physiques envers ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_ENFT_DENONC : Des violences psychologiques sur ses enfants (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_ENFT_DENONC : Des violences sexuelles sur ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENLEVT_ENFT_DENONC : L'enlèvement ou des menaces d'enlèvement de ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+	
+VIOLENCE_DEBUT_DENONC : Moment où les violences dénoncées ont débuté
+1 - Durant la période de vie du couple (physique ou affective)
+2 - Au moment de la rupture du couple (physique ou affective)
+3 - Après la rupture du couple (physique ou affective)
+X – Non Renseigné
+
+Selon les dires du demandeur, certains faits de violence dénoncés se sont déroulés :
+
+LIEU_DOM_COMMUN_DENONC : Au domicile commun du couple
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_DOM_DEM_DENONC : Au domicile du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_DOM_DEF_DENONC : Au domicile du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_W_DEM_DENONC : Sur le lieu de travail du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_PUBLIC_DENONC : Dans l'espace public
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_TIERS_DENONC : Chez un tiers
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_ENFT_DENONC : Les enfants ont été témoins des violences
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_NOUV_CONJ_DENONC : Le nouveau conjoint du demandeur a été témoin des violences
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_PROCHE_DENONC : Un proche (ami ou famille) du demandeur a été témoin des violences
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_AUTRE_DENONC : Les violences ont été commises en présence d'autres personnes que les personnes précitées
+0 – NON (ou non précisé)
+1 – OUI	
+	
+Le début ou le renforcement des violences a t’il pour contexte :
+
+DEBUT_SEPAR_DENONC : L'annonce de la séparation
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_GROSSESSE_DENONC : L'annonce d'une grossesse ou la naissance d'un enfant
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_ENFT_DENONC : Un conflit lié aux enfants (éducation, droit de visite, etc.)
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_ADDICT_DENONC : Une consommation d'alcool ou de stupéfiants
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_CONFINE_DENONC : La période de confinement
+0 – NON (ou non précisé)
+1 – OUI	
+	
+PREUV_PLAINTE_AVANT : Le demandeur a déjà porté plainte pour d'autres faits violences antérieurs (procès verbal)
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_PLAINTE_AVANT_NB : Nombre de plaintes mentionnées dans le jugement   
+
+PREUV_PLAINTE_ACTUEL : Le demandeur a porté plainte pour les faits de violences actuellement dénoncés (procès verbal)
+0 – NON (ou non précisé)
+1 – OUI	
+
+Le jugement fait il mention :
+
+PREUV_MAIN_COURANTE : D’une ou plusieurs mains courantes
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_CERTIF_IML : D’un ou plusieurs certificats médicaux de l'IML ou de l'UMJ *bulle
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_CERTIF_MED : D’un ou plusieurs certificats médicaux du médecin traitant ou d'origine non précisée
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_PROCHE_ASSIST : De témoignages de proches ou voisins ayant assisté aux violences
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_W_SOCIAL : De témoignages de travailleurs sociaux
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_PROCHE_NON_ASSIST : De témoignages de proches ou voisins n'ayant pas assisté aux violences mais ayant constaté des traces de coups ou recueilli les aveux du défendeur
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_ENFT : Du témoignage des enfants (du couple et/ou du demandeur)
+0 – NON (ou non précisé)
+1 – OUI

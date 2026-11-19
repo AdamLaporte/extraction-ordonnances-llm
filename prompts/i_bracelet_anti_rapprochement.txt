@@ -1,0 +1,49 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Bracelet Anti Rapprochement
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+BAR_DEM : Le demandeur demande-t-il que le défendeur porte un barcelet anti rapprochement
+0 – NON (ou non précisé)
+1 – OUI
+
+BAR_POS : Position du défendeur vis à vis de la demande de bracelet anti-rapprochement
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+BAR_DEF : Le défendeur fait-il une demande de port du bracelet anti-rapprochement (art 515-11-1)
+0 – NON (ou non précisé)
+1 – OUI
+
+BAR_PARQUET : Avis du parquet sur la demande de port du bracelet anti-rapprochement
+0 - Avis défavorable
+1 - Avis favorable
+2 - Avis formulé mais neutre
+X - Non renseigné
+
+BAR_PARQUET_REFUS : Si avis défavorable du parquet, pourquoi?
+1 - La situation médicale du défendeur ne le permet pas
+2 - Le danger n'est pas suffisamment caractérisé
+3 - Les lieux de domicile et de travail ne le permettent pas
+4 - Le bracelet a déjà été mis en œuvre dans une procédure pénale
+9 – autre
+X – Non Renseigné
+
+BAR_JAF : Décision du JAF sur la demande de port du bracelet anti-rapprochement
+0 – rejeté
+1 – accordé
+X – non statué
+
+BAR_JAF_REFUS : Si rejet du JAF, pourquoi ?
+1 - La situation médicale du défendeur ne le permet pas
+2 - Le danger n'est pas suffisamment caractérisé
+3 - Les lieux de domicile et de travail ne le permettent pas
+4 - Le bracelet a déjà été mis en œuvre dans une procédure pénale
+9 – autre
+X – Non Renseigné
+
+BAR_DUREE : Durée de la mesure de BAR prononcée, en mois
+
+BAR_DISTANCE : Distance de la zone d’alerte prononcée en km

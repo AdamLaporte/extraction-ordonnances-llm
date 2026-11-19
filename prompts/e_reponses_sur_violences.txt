@@ -1,0 +1,185 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Réponses sur violences
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+REP_VIOLENCE : Le jugement fait mention de la réponse du défendeur aux accusations du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+	
+Réponse du défendeur aux accusations du demandeur sur :
+
+PHYS_DEM_REPDEF : Des violences physiques sur le demandeur (coups de poing, pied, tête, gifle, etc.) avec ou sans arme
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_DEM_REPDEF : Des menaces de violences physiques envers le demandeur
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_MORT_DEM_REPDEF : Des menaces de mort envers le demandeur
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_ARME_DEM_REPDEF : Des menaces avec usage d’une arme (blanche ou à feu)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_DEM_REPDEF : Des violences psychologiques sur le demandeur (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_HARCEL_DEM_REPDEF : Du harcèlement téléphonique ou via réseaux sociaux
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_CONTROL_DEM_REPDEF : Des comportements de contrôle de la part du défendeur (autoritarisme, restriction de liberté, sélection des fréquentations, des vêtements, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+SEXUEL_DEM_REPDEF : Des violences sexuelles sur le demandeur (viols et/ou autres agressions sexuelles)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+ECONOMIC_DEM_REPDEF : Des violences économiques (vol d'argent, retrait de la carte, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+VOLPAPIER_DEM_REPDEF : Des vols de papiers d'identité et/ou de titre de séjour et/ou permis de conduire
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+INTRUSION_DEM_REPDEF : Des intrusions ou tentatives d'intrusion sur l'actuel lieu de résidence du demandeur
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+DEGRAD_DEM_REPDEF : Des dégradations matérielles (véhicule, portable, meubles, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PHYS_ENFT_REPDEF : Des violences physiques sur ses enfants (coups de poing, pied, tête, gifle, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_ENFT_REPDEF : Des menaces de violences physiques envers ses enfants
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_ENFT_REPDEF : Des violences psychologiques sur ses enfants (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+SEXUEL_ENFT_REPDEF : Des violences sexuelles sur ses enfants
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+ENLEVT_ENFT_REPDEF : L'enlèvement ou des menaces d'enlèvement de ses enfants
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+Le défendeur reconnaît que :
+	
+TEMOIN_ENFT_REPDEF : Les enfants ont été témoins des violences
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+
+TEMOIN_NOUV_CONJ_REPDEF : Le nouveau conjoint du demandeur a été témoin des violences
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+
+TEMOIN_PROCHE_REPDEF : Un proche (ami ou famille) du demandeur a été témoin des violences
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+
+TEMOIN_AUTRE_REPDEF : Les violences ont été commises en présence d'autres personnes que les personnes précitées
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+	
+TENSION_OK_DEF : Le défendeur reconnaît l'existence de tensions, conflits dans le couple
+0 – NON (ou non précisé)
+1 – OUI
+
+ILLEGAL_OK_DEF : Le défendeur reconnaît le caractère illégal / problématique/inexcusable de ses actes
+0 – NON (ou non précisé)
+1 – OUI
+
+MINIM_JUSTIF_DEF : Le défendeur tente de minimiser ou de justifier ses actes
+0 – NON (ou non précisé)
+1 – OUI
+
+DIVORCE_OK_DEF : Le défendeur se dit d'accord pour la séparation/le divorce
+0 – NON (ou non précisé)
+1 – OUI

@@ -1,0 +1,114 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Réponses sur demandes
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+POSTURE_FORME : Position du défendeur à l'égard de l'ordonnance de protection demandée
+0 - s'y oppose
+1 – y est favorable
+2 – s'en remet à la décision du juge
+X – non précisé
+
+POSTURE_FOND : Le défendeur s'oppose sur le fond à l'OP (irrecevabilité, nullité, caducité …)
+0 – NON (ou non précisé)
+1 – OUI
+
+REP_DEMANDE : Le jugement fait mention de la réponse du défendeur sur les demandes du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+	
+Enfants mineurs du couple - position du défendeur vis à vis des demandes du demandeur et demandes du défendeur * (situation de l'enfant le plus jeune si demandes différentes) :
+
+ENFT_HEBERG_POS : Le droit de visite et/ou d'hébergement des enfants mineurs
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_HEBERG_DEF : Le défendeur demande à bénéficier :
+1 – d'un droit de visite médiatisé
+2 – d'un droit de visite sans hébergement
+3 - d'un droit de visite et d'hébergement classique (1 week-end sur 2 et la moitié des vacances scolaires)
+4 – d'un autre type de droit de visite et d'hébergement
+X – non précisé
+
+ENFT_PASS_BRAS_DEF : La fixation des conditions du passage de bras
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_AP_POS : L’exercice de l'autorité parentale
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_RESID_DEM_POS : La fixation de la résidence principale des enfants chez le demandeur
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_RESID_DEM_DEF : Quelle est la demande du défendeur en matière de résidence habituelle des enfants
+1 – résidence alternée
+2 – résidence principale chez le défendeur
+3 - Résidence principale chez le demandeur
+4 – résidence principale chez un tiers
+5 – résidence en foyer
+9 – résidence autre
+X – non précisé
+
+ENFT_CEE_DEF_MT : Montant mensuel proposé par le défendeur pour la contribution à l'entretien des enfants (par enfant)
+
+Logement commun : position du défendeur vis à vis de :
+
+RESID_SEPARE_POS : La résidence séparée
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+LOGT_POS : La jouissance du domicile commun ou à l'attribution du droit de bail au demandeur
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+LOGT_PEC_FRAIS_POS : La prise en charge par le défendeur des frais afférents au logement commun.
+0 – s'oppose
+1 – accepte
+2 – propose une contribution autre que celle demandée
+X – non précisé
+	
+Autres demandes exprimées par le demandeur, position du défendeur vis à vis de :
+
+PEC_SANITAIRE_POS : La demande  de sa prise en charge sanitaire, sociale ou psychologique ou un stage de responsabilisation pour la prévention et la lutte contre les violences au sein du couple et sexiste (515-11-2°)
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+CONTRIB_MRGE_POS : La contribution aux charges du mariage (515-11) ou de l'aide matérielle pour les PACS (515-11)
+0 – s'oppose
+1 – accepte
+2 – propose une contribution autre que celle demandée
+X – non précisé
+
+CONTRIB_MRGE_DEF_MT : Montant mensuel de la contribution proposée par le défendeur
+	
+Le défendeur exprime t’il les demandes suivantes :
+	
+ART_700_DEF : Le paiement par le demandeur d'une somme au titre de l'article 700 du code de procédure civile (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_SORTIE_TERR_DEF : L’interdiction de sortie du territoire des enfants communs sans l'autorisation des 2 parents
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_EXPERT_PSY_DEF : Une expertise psychologique du ou des enfants mineurs communs
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_INVESTIG_DEF : Une mesure d'investigation (enquête sociale, expertise)
+0 – NON (ou non précisé)
+1 – OUI
+
+AJ_PROV_DEF : L’admission à l'AJ provisoire
+0 – NON (ou non précisé)
+1 – OUI

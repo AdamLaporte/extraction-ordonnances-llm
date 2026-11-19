@@ -1,0 +1,27 @@
+# --- Données judiciaires : JAMAIS versionnées ---
+# Seule la notice data/README.md est publiée.
+data/*
+!data/README.md
+*.pdf
+*.xlsx
+*.xls
+*.ods
+*.csv
+*.msg
+*.json
+*.geojson
+
+# Secrets
+.env
+*.env
+!.env.example
+
+# Journaux (peuvent contenir des extraits de texte)
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/

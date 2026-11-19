@@ -1,0 +1,186 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Procédure
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+TYP_JUR : Type de juridiction ("TJ": Tribunal Judiciaire, "TPI": Tribunal de Première Instance, "TPISD": Section Détachée du Tribunal de Première Instance, "TPRX": Tribunal de Proximité)
+
+L_COM_LOC : Libellé de la commune siège de la juridiction
+
+NO_RG : le numéro de répertoire général
+A renseigner tel qu'indiqué sur la décision, ce numéro est en grande majorité au format AA/12345
+Bien respecter ce format, ce numéro permettra l'appariement.
+Attention de ne pas saisir le numéro de minute en lieu et place du numéro RG.
+
+HC_OPVC : Décisions dans le Champ/Hors champ :
+0 - dans le champ
+1 - décision rendue avant le 1er janvier 2019 ou après le 30 juin 2021
+2 - caducité : l’action en justice valablement initiée n’a par la suite, pas respecté les contraintes de la procédure (ex : non dépôt de l’acte de saisie)
+3 - désistement : le demandeur ne souhaite pas poursuivre la procédure qu’il a initiée
+4 - renouvellement d’une mesure d’OPVC - ex : une OP a été prononcée antérieurement pour une durée de 3 mois. Il est demandé au juge de renouveler cette OP pour une nouvelle durée de 3 mois 
+5 - modification d’une mesure d’OPVC prononcée - ex : il est demandé la modification d’une mesure prononcée lors d’une OP précédente (ex : le juge avait prononcé une OP avec interdiction de s’approcher à moins de 2 kms de la personne protégée et pause d’un BAR. Il est demandé au juge d’abaisser cette distance à 1km)
+6 - suppression d’une mesure : - ex : une OP a été prononcée antérieurement avec obligation de prendre en charge les frais du logement. Il est demandé au juge de supprimer cette obligation. 
+7 - ajout d’une mesure - ex : une OP a été prononcée antérieurement accordant au défendeur un droit de visite simple pour ses enfants mineurs. La remise des enfants se passant mal en raison de conflits entre les parties, Il est demandé au juge que les enfants soient remis à l’autre parent par l’intermédiaire d’une tierce personne ou devant un commissariat (passage de bras).
+8 - dispense temporaire - ex : une OP a été prononcée antérieurement prévoyant le versement d’une CEE pour les enfants. Le débiteur rencontre des difficultés financières et il demande au juge de suspendre le versement de la CEE.
+9 - autre décision hors champ (irrecevabilité …)
+
+DA_SAISINE : date de saisine au format "aaaa-mm-jj"
+Cette date peut aussi porter le nom de « date de la requête ».
+C'est la date à laquelle le demandeur, ou le ministère public, saisit le tribunal de sa demande ou
+requête, en vue d'obtenir une ordonnance de protection.
+Nota Bene : ces 3 dates s'affichent dans un ordre différent de celui de l'outil OPVC afin de
+"coller" à la place de ces dates dans l'écriture de la décision.
+Rubriques : 7-date de décision ; 8- date d'audience et 9-date de saisine/requête
+Ces 3 dates sont obligatoires et doivent respecter la chronologie de la procédure.
+
+DA_FIX_AUDIENCE : date de l'ordonnance de fixation de la date d'audience au format "aaaa-mm-jj"
+Si DA_SAISINE < 27/05/2020 renvoyer DA_FIX_AUDIENCE = null
+Si tu ne trouves aucune date de l'ordonnance de fixation de la date d'audience, mets la même date que la date de saisine.
+
+FIX_AUDIENCE_NOTIF : Par qui la date d'audience a-t-elle été signifiée au défendeur. Cette variable s'affichera uniquement pour les affaires dont la date de saisine (DA_SAISINE) est postérieure au 27 mai 2020.
+1 - L'avocat du demandeur
+2 - Le greffe du TJ
+3 - Le ministère public
+4 - Voie administrative
+X - Non renseigné
+
+DA_AUDIENCE : date de l'audience au format "aaaa-mm-jj"
+Cette date figure sur la 1ère page de la décision.
+
+AUDIENCE_CONFIN : Si l’audience a eu lieu durant une des 3 période de confinement (de mars à mai 2020 ; d’octobre à décembre 2020 ; et d’avril à juin 2021) la variable  « En période d’urgence sanitaire, comment l’audience s’est-elle tenue » s’affiche. Il faudra alors indiquer si cette audience s’est déroulée.
+1 - Au tribunal
+2 - Par téléphone
+3 - Par visioconférence
+9 - Autre
+X - non précisé
+
+DA_DEC : date de la décision au format "aaaa-mm-jj"
+Elle apparait sur la première page de la décision et, pour être dans le champ, doit être entre le 1er janvier 2019 et le 30 juin 2021.
+
+OP_PREC_REFU : Le JAF mentionne-t-il l’existence d’une précédente demande d'OP refusée ?
+0 - NON (ou non précisé)
+1 - OUI
+
+OP_PREC_ACCOR : Le JAF mentionne-t-il l’existence d’une précédente demande d’OP accordée par le passé ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI : Y a-t-il eu au moins un renvoi de cette affaire avant cette audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_QUI : Par qui ce renvoi avait-il été demandé ?
+1 - Le demandeur seul
+2 - Le défendeur seul
+3 - Les deux (demandeur et défendeur)
+4 - Ordonné d'office par le juge
+X - Non renseigné
+
+DA_RENVOI_AUDIENCE : S'il y a eu au moins un renvoi, date de la première audience au format "aaaa-mm-jj"
+
+RENVOI_MOTIF_CONTRAD : Le renvoi de l’audience a été ordonné afin de respecter le principe du contradictoire ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_DELAI : Le renvoi de l’audience a été ordonné car le délai de 2 jours pour signifier la date d'audience n’était pas respecté ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_PIECES : Le renvoi de l’audience a été ordonné car des pièces du demandeur ont été envoyées tardivement ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_AVOCAT : Le renvoi de l’audience a été ordonné car la désignation d'un avocat était en cours ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_PARQUET : Le renvoi de l’audience a été ordonné car l’avis du parquet était absent ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_INTERP : Le renvoi de l’audience a été ordonné car il y a nécessité d'un interprète ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_AJ : Le renvoi de l’audience a été ordonné car la demande d’aide juridictionnelle était en cours ?
+0 - Non (non précisé)
+1 - Oui concernant le demandeur seul
+2 - Oui concernant le défendeur seul
+3 - Oui concernant les deux parties
+
+RENVOI_MOTIF_AUTRE : Le renvoi de l’audience a été ordonné pour un autre motif
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_AUTRE_DET : Précision du motif de renvoi Autre
+
+MP_ORIGINE : Le ministère public est à l'origine de la demande ?
+0 - NON (ou non précisé)
+1 - OUI
+
+MP_PRESENCE : Le jugement fait mention de la présence du ministère public à l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+MP_CONCLUSION : Quel est l’avis du ministère public (procureur de la République) sur la demande d’ordonnance de protection ? (hors mesures de bracelet anti-rapprochement)
+0 - Pas d’avis (ou non précisé)
+1 - avis favorable à l'OP
+2 - avis défavorable à l'OP
+9 - avis formulé mais neutre
+
+PRES_AUDIENCE_DEM : Présence du demandeur à l’audience ?
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+AVOC_DEM : Assistance ou représentation du demandeur par un avocat ?
+1 - OUI assisté
+2 - OUI représenté
+3 - OUI sans précision
+4 - NON, ni assisté, ni représenté
+X - Non Renseigné
+
+AJ_DEM_OK : Le demandeur bénéficie de l'AJ lors de l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+PRES_AUDIENCE_DEF : Présence du défendeur à l’audience ?
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+AVOC_DEF : Assistance ou représentation du défendeur par un avocat ?
+1 - OUI assisté
+2 - OUI représenté
+3 - OUI sans précision
+4 - NON, ni assisté, ni représenté
+X - Non Renseigné
+
+AJ_DEF_OK : Le défendeur bénéficie de l'AJ lors de l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+AUDIENCE_INTERP : Présence d'un (ou plusieurs) interprète(s) à l’audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+AUDITION_SEPARE : Le demandeur et le défendeur ont-ils été auditionnés séparément ?
+0 - NON (ou non précisé)
+1 - OUI
+
+AUDITION_SEPARE_QUI : Qui a demandé cette audition séparée ?
+1 - le demandeur seul
+2 - le défendeur seul
+3 - les 2 parties
+4 - Ordonnée d'office par le juge
+X - Non Renseigné
+
+AUDITION_ENFT : L’audition des enfants a-t-elle été demandée ?
+0 - non (ou non précisé ou sans objet)
+1 - oui pour tous les enfants
+2 - oui pour une partie des enfants
+
+TGD : Le demandeur bénéficie du téléphone grave danger au moment de l'audience ?
+0 - NON (ou non précisé)
+1 - OUI

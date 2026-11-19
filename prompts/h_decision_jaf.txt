@@ -1,0 +1,263 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Décision JAF
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+ACCORD : L'ordonnance de protection est accordée par le JAF
+0 – NON (ou non précisé)
+1 – OUI
+
+RENVOI_FOND : Le juge renvoie-t’il les parties à une audience dont il fixe la date pour qu'il soit statué au fond sur les modalités de l'exercice de l'autorité parentale et la contribution à l'entretien et l'éducation de l'enfant
+0 – NON (ou non précisé)
+1 – OUI
+
+OP_DUREE : Durée de la mesure (en mois)
+
+ART_696_DEC : Condamnations aux dépens (article 696 du code de procédure civile) sont à la charge
+1 – du demandeur
+2 – du défendeur
+3 – partagés entre demandeur et défendeur
+9 – ni l'un ni l'autre (réserve)
+X – non statué
+
+Décision du Jaf (situation de l'enfant le plus jeune si décisions différentes selon les enfants) :
+
+ENFT_IEC_TOT_DEC : 110 - Interdiction totale pour le défendeur d'entrer en contact avec les enfants communs mineurs (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_IEC_MEDIA_DEC : 120 - Instauration d'un droit de visite en espace rencontre ou lieu neutre pour le défendeur avec interdiction d'entrer en contact (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_MEDIA_DEC : 130 - Instauration d'un droit de visite en espace rencontre ou lieu neutre ou en présence d’un tiers pour le défendeur sans interdiction d'entrer en contact (515-11)
+0 – rejeté
+1 – accordé en présence d'un tiers
+2 – accordé en espace rencontre ou lieu neutre
+X – non statué
+
+ENFT_VISIT_DEC : 140 - Instauration d'un droit de visite simple sans droit d'hébergement (515-11)
+0 – rejeté
+1 – accordé en présence d'un tiers
+2 – accordé chez le demandeur
+3 - accordé sans condition
+9 - accordé avec autre condition/contrainte…
+X – non statué
+
+ENFT_DVH_DEC : 150 - Instauration d'un droit de visite et d'hébergement
+0 – rejeté
+1 – accordé classique (1/2 WE et 1/2 vacances)
+2 – accordé élargi (plus que 1/2 WE et ou plus de 1/2 vacances)
+3 – accordé restreint (moins que1/2 WE et/ou moins de 1/2 vacances)
+X – non précisé
+
+ENFT_PASS_BRAS_DEC : 160 - Fixation des modalités du passage de bras (515-11)
+0 – rejeté
+1 – accordé en présence d'un tiers
+2 – accordé en espace rencontre
+3 – accordé à l’école
+4 – accordé sur le parking de la gendarmerie ou du commissariat
+5 – accordé lieu public fréquenté
+9 – accordé autre
+X – non statué
+
+ENFT_RESERVE_DEC : 170 - Suspension ou réserve du droit de visite et d'hébergement du défendeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_REVISION_DEC : 180 - Révision d'un droit de visite et/ou d'hébergement déjà fixé
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_AUTRE_DEC : 190 - Autre demande relative au droit d’hébergement et de visite des enfants mineurs
+0 – rejeté
+1 – accordé
+X – non statué
+
+Décision du Jaf concernant les enfants mineurs du couple (situation de l'enfant le plus jeune si décisions différentes selon les enfants) :
+
+ENFT_AP_CONJ_DEC : Constate ou statue sur l'exercice conjoint de l'autorité parentale (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_AP_DEM_DEC : Fixe l'exercice exclusif de l'autorité parentale au profit du demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_RESID_DEM_DEC : Fixe la résidence principale des enfants communs au domicile du demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_RESID_DEC : Lieu de résidence fixée par le juge
+1 – résidence alternée
+2 – résidence principale chez le défendeur
+3 - Résidence principale chez le demandeur
+4 – résidence principale chez un tiers
+5 – résidence en foyer
+9 – résidence autre
+X – non précisé
+
+ENFT_CEE_DEC : Fixe le montant de la contribution à l'entretien des enfants  (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_CEE_VIA_DEC : Le JAF ordonne-t’il le versement de la CEE par l'intermédiaire de l'organisme débiteur des prestations familiales
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_CEE_DEC_MT : Montant mensuel de la contribution à l'entretien des enfants décidé (par enfant)
+
+A la demande du demandeur, du défendeur ou de son propre chef, le JAF :
+
+ENFT_SORTIE_TERR_DEC : Ordonne l'interdiction de sortie du territoire des enfants sans l'autorisation d’un ou des deux parents
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_EXPERT_PSY_DEC : Ordonne une expertise psychologique du ou des enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_INVESTIG_DEC : Ordonne une mesure d'investigation (enquête sociale, expertise)
+0 – NON (ou non précisé)
+1 – OUI
+
+Décision du Jaf concernant les enfants majeurs du couple (situation de l'enfant le plus jeune si décisions différentes selon les enfants) :
+
+ENFT_MAJ_IEC_DEC : Interdiction totale pour le défendeur d'entrer en contact avec le ou les enfants communs majeurs (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+Décisions du JAF concernant les demandes d’interdiction :
+
+DEM_IEC_DEC : Interdiction d'entrer en contact avec le demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+NOUV_CONJ_IEC_DEC : Interdiction d'entrer en contact avec le nouveau(elle) conjoint(e) du demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+AUTRE_IEC_DEC : Interdiction d'entrer en contact avec un ou plusieurs membres de la famille du demandeur (mère, père, sœur, etc.) ou amis ou témoins (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ARME_INTERDI_DEC : Interdiction de porter ou de posséder une arme et remise éventuelle à la police (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LIEU_INTERDI_DEC : Interdiction pour le défendeur de se rendre en certains lieux (école des enfants, domicile ou travail du demandeur, etc.)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LIEU_INTERDI_DOMIC_DEC : l'interdiction porte sur le domicile du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_ECOLE_DEC : l'interdiction porte sur l'école des enfants et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_W_DEC : l'interdiction porte sur le lieu de travail du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+INTERDI_AUTRE_DEC : Autre demande relative à une interdiction (hors enfants)
+0 – rejeté
+1 – accordé
+X – non statué
+
+Décisions du JAF concernant les demandes relatives au logement :
+
+RESID_SEPARE_DEC : Enregistrement de la résidence séparée des époux (au sens d'entériner et autoriser) (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ADR_INSTANCE_DEC : Dissimulation de l'adresse du demandeur pour les besoins de l'instance (515-11 6°)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ADR_VIE_DEC : Dissimulation de l'adresse du demandeur pour les besoins de la vie courante (515-11-6°bis)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LOGT_USAGE_DEC : Attribution au demandeur de la jouissance du domicile commun (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LOGT_BAIL_DEC : Attribution au demandeur du droit de bail (hors 515-11)
+0 – rejeté / avis défavorable
+1 – accordé / avis favorable
+5 – déclare la demande irrecevable ou se déclare incompétent
+X – non statué
+
+LOGT_PEC_FRAIS_DEC : Prise en charge (totale ou partielle) par le défendeur des frais afférents au logement (515-11)
+0 – rejeté
+1 - Accordée, avec répartition telle que demandée
+2 - Accordée, mais répartition différente de celle demandée
+3 - Accordée (sans montant demandé)
+X – non statué
+
+EXPULS_LOGT_DEC : Expulsion du défendeur du domicile commun (hors 515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LOGT_AUTRE_DEC : Décision sur d'autre(s) demande(s) relative(s) )au logement
+0 – rejeté(s) / avis défavorable(s)
+1 – accordé / avis favorable(s)
+5 – déclare la (les) demande(s) irrecevable(s) ou se déclare incompétent
+9 – avis différents selon les demandes
+X – non statué
+
+Décisions du JAF concernant les autres demandes du demandeur et/ou du défendeur :
+
+PEC_SANITAIRE_DEC : Ordonne que le défendeur ait une prise en charge sanitaire, sociale ou psychologique ou un stage de responsabilisation pour la prévention et la lutte contre les violences au sein du couple et sexiste (515-11-2°)
+0 – rejeté
+1 – accordé
+X – non statué
+
+CONTRIB_MRGE_DEC : Fixation du montant mensuel de la contribution aux charges du mariage (515-11) ou de l'aide matérielle pour les PACS (515-11) dû par le défendeur
+0 – rejeté
+1 – accordé
+X – non statué
+
+CONTRIB_MRGE_DEC_MT : Montant mensuel de la contribution décidée par le juge
+
+ART_700_DEM_DEC : Paiement par le défendeur d'une somme au titre de l'article 700 du CPC (hors 515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ART_700_DEF_DEC : Paiement par le demandeur d'une somme au titre de l'article 700 du code de procédure civile (hors 515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ART_700_MT : Montant de la somme fixée au titre de l'article 700 du CPC
+
+AJ_PROV_DEM_DEC : Admission provisoire du demandeur à l'aide juridictionnelle (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+AJ_PROV_DEF_DEC : Admission provisoire du défendeur à l'aide juridictionnelle (515-11)
+0 – NON (ou non précisé)
+1 – OUI

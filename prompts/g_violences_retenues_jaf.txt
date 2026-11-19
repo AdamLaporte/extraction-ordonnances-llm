@@ -1,0 +1,189 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Violences retenues JAF
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+Le JAF considère comme vraisemblables ou avérées :
+
+PHYS_DEM_RETENU : Des violences physiques sur le demandeur (coups de poing, pied, tête, gifle, etc.) avec ou sans arme
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_DEM_RETENU : Des menaces de violences physiques envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_MORT_DEM_RETENU : S’agit-il de menaces de mort envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ARME_DEM_RETENU : S’agit-il de menaces avec usage d’une arme (blanche ou à feu)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_DEM_RETENU : Des violences psychologiques sur le demandeur (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_HARCEL_DEM_RETENU : S’agit-il d’un harcèlement téléphonique ou via réseaux sociaux
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_CONTROL_DEM_RETENU : S’agit-il de comportements de contrôle de la part du défendeur (autoritarisme, restriction de liberté, sélection des fréquentations, des vêtements, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_DEM_RETENU : Des violences sexuelles sur le demandeur (viols et/ou autres agressions sexuelles)
+0 – NON (ou non précisé)
+1 – OUI
+
+ECONOMIC_DEM_RETENU : Des violences économiques (vol d'argent, retrait de la carte, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VOLPAPIER_DEM_RETENU : Des vols de papiers d'identité et/ou de titre de séjour et/ou permis de conduire
+0 – NON (ou non précisé)
+1 – OUI
+
+INTRUSION_DEM_RETENU : Des intrusions ou tentatives d'intrusion sur l'actuel lieu de résidence du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+DEGRAD_DEM_RETENU : Des dégradations matérielles (véhicule, portable, meubles, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+	
+PHYS_ENFT_RETENU : Des violences physiques sur ses enfants (coups de poing, pied, tête, gifle, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ENFT_RETENU : Des menaces de violences physiques envers ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_ENFT_RETENU : Des violences psychologiques sur ses enfants (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_ENFT_RETENU : Des violences sexuelles sur ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENLEVT_ENFT_RETENU : L'enlèvement ou des menaces d'enlèvement des enfants
+0 – NON (ou non précisé)
+1 – OUI
+	
+Le JAF fait état du caractère avéré ou vraisemblable :
+
+TENSION_RETENU : Des conflits/tensions/disputes
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_RECIPROC_RETENU : De l’existence de violences physiques et/ou psychologiques réciproques au sein du couple
+0 – NON (ou non précisé)
+1 – OUI
+
+DANGER_RETENU : Du danger encouru par le demandeur ("danger", "risque de passage à l'acte", "risque de récidive", etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENT_DEF_RETENU : Du caractère violent du défendeur (inclinaison, tempérament, penchants, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_REPETE_RETENU : Du caractère habituel ou répété des violences dénoncées
+0 – NON (ou non précisé)
+1 – OUI
+	
+SEPAR_CONFLIT_RETENU : Le JAF note que les violences rapportées s'inscrivent dans le cadre d'une séparation conflictuelle (idée de violence inédite et réactionnelle)
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_FIN_SEPARE_RETENU : Le JAF note que les violences ont cessé depuis la séparation du couple
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_ANCIEN_RETENU : Le JAF note que les derniers faits de violences avérés ou vraisemblables sont anciens
+0 – NON (ou non précisé)
+1 – OUI
+	
+MENSONGE_DEM_RETENU : Le JAF note ou soupçonne des mensonges dans les propos du demandeur (instrumentalisation pour disposer du logement, pour obtenir la garde des enfants, obtenir un titre de séjour, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+NERVEUX_DEM_RETENU : Le JAF note de l'agressivité dans le comportement du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+REPONSE_EVASIVE_DEM_RETENU : Le JAF note que le demandeur n'a pas répondu à certaines de ses questions ou n'a pas été clair
+0 – NON (ou non précisé)
+1 – OUI
+
+PAS_DIVORCE_DEM_RETENU : Le JAF note que le demandeur n'a pas initié de procédure de divorce ou de dissolution de PACS depuis les faits
+0 – NON (ou non précisé)
+1 – OUI
+
+MENSONGE_DEF_RETENU : Le JAF note ou soupçonne des mensonges dans les propos du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+NERVEUX_DEF_RETENU : Le JAF note l'agressivité dans le comportement du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+REPONSE_EVASIVE_DEF_RETENU : Le JAF note que le défendeur n'a pas répondu à certaines de ses questions ou n'a pas été clair
+0 – NON (ou non précisé)
+1 – OUI
+
+PB_PARENT_DEF_RETENU : Le JAF remet en cause les qualités parentales du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+PB_PSY_DEF_RETENU : Le Jaf souligne la fragilité psychologique du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+PRISON_DEF : Le JAF note que le défendeur est actuellement emprisonné
+0 – NON (ou non précisé)
+1 – OUI
+
+HOPITAL_DEF : Le JAF note que le défendeur est actuellement hospitalisé
+0 – NON (ou non précisé)
+1 – OUI
+	
+PASSE_VCONJ_CONDA : Le défendeur a déjà été condamné pénalement pour des faits de violences sur conjoint (actuel ou précédent)
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VCONJ_CONDA_NB : Nombre de condamnations
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VCONJ_PRISON : Le défendeur a déjà été incarcéré pour des faits de violences sur conjoint (actuel ou précédent)
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VCONJ_MAP : Le défendeur a déjà fait l'objet d'un rappel à la loi ou de mesures alternatives aux poursuites pour des faits de violences sur conjoint (actuel ou précédent)
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VENFT_CONDA_MAP : Le défendeur a déjà été condamné pénalement ou fait l'objet d'un rappel à la loi ou de mesures alternatives aux poursuites pour des faits de violences sur des enfants (au sens large) *(enfants communs, du seul demandeur, du seul défendeur ou autres enfants)
+0 – NON (ou non précisé)
+1 – OUI
+
+PROCES_ENCOURS : Le défendeur fait actuellement l’objet d’une procédure judiciaire (contrôle judiciaire, COPJ, enquête de police en cours, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PROCES_ENCOURS_LIEN_OP : Cette procédure judiciaire est-elle en lien avec les faits relatés dans la présente demande d’OP
+0 – NON (ou non précisé)
+1 – OUI
+
+PROCES_ENCOURS_PREVENTIVE : Le défendeur est actuellement incarcéré dans le cadre de cette procédure
+0 – NON (ou non précisé)
+1 – OUI
+
+PRISON_ENCOURS_AUTRE : Le défendeur est actuellement incarcéré pour une autre raison
+0 – NON (ou non précisé)
+1 – OUI

@@ -1,0 +1,208 @@
+En étant le plus concis possible, fournissez un objet JSON avec les informations suivantes.
+
+Onglet Demandes
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+MOTIV_DEM : Le jugement mentionne que le demandeur demande une OP pour
+1 – se protéger et protéger ses enfants
+2 – se protéger seul(e)
+3 – protéger ses enfants uniquement
+9 – autre motif
+X – motif non précisé
+
+MOTIV_DEM_DET : si autre motif, précisez le autre
+	
+Demande du demandeur au JAF (situation de l'enfant le plus jeune si demandes différentes) :
+	
+ENFT_IEC_TOT_DEM : 110 - Interdiction totale pour le défendeur d'entrer en contact avec les enfants communs mineurs (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_IEC_MEDIA_SUBS_DEM	: 115 (liée à 110) - Demande subsidiaire en cas de refus IEC totale : interdiction d'entrer en contact avec les enfants mineurs en dehors du droit de visite médiatisé *(espace rencontre, lieu neutre, présence d’un tiers)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_IEC_MEDIA_DEM : 120 - Instauration d'un droit de visite en espace rencontre ou lieu neutre pour le défendeur avec interdiction d'entrer en contact *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_MEDIA_DEM : 130 - Instauration d'un droit de visite en espace rencontre ou lieu neutre ou en présence d’un tiers pour le défendeur sans interdiction d'entrer en contact *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_VISIT_SUBS_DEM : 135 (liée à 120 et 130) - Demande subsidiaire en cas de refus de droit de visite médiatisé : fixer les modalités du droit de visite simple (sans hébergement) des enfants mineurs
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_VISIT_DEM : 140 - Instauration d'un droit de visite simple sans droit d'hébergement *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_DVH_DEM : 150 - Instauration d'un droit de visite et d'hébergement
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_PASS_BRAS_DEM : 160 - Fixation des modalités du passage de bras (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_RESERVE_DEM : 170 - Suspension ou réserve du droit de visite et d'hébergement du défendeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_REVISION_DEM : 180 - Révision d'un droit de visite et/ou d'hébergement déjà fixé
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_AUTRE_DEM : 190 - Autre demande relative au droit d’hébergement et de visite des enfants mineurs
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_AUTRE_DEM_DET : si autre demande, précisez le autre
+
+Demandes du demandeur au JAF :
+
+ENFT_AP_CONJ_DEM : Constater et statuer sur l'exercice conjoint de l'autorité parentale (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_AP_DEM_DEM : Fixer l'exercice exclusif de l'autorité parentale au profit du demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_RESID_DEM_DEM : Fixer la résidence principale des enfants communs au domicile du demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_CEE_DEM : Fixer le montant de la contribution à l'entretien des enfants  (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_CEE_DEM_MT : Montant mensuel de la contribution à l'entretien des enfants demandé (par enfant)
+
+ENFT_SORTIE_TERR_DEM : Ordonner l'interdiction de sortie du territoire des enfants sans l'autorisation du demandeur avec inscription au fichier des personnes recherchées
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_EXPERT_PSY_DEM : Ordonner une expertise psychologique du ou des enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_INVESTIG_DEM : Ordonner une mesure d'investigation *(enquête sociale, expertise)
+0 – NON (ou non précisé)
+1 – OUI
+	
+Demandes du demandeur au JAF (situation de l'enfant le plus jeune si demandes différentes) :
+
+ENFT_MAJ_IEC_DEM : Interdiction totale pour le défendeur d'entrer en contact avec le ou les enfants communs majeurs (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+	
+Demandes du demandeur au JAF :
+
+DEM_IEC_DEM : Interdiction d'entrer en contact avec le demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+NOUV_CONJ_IEC_DEM : Interdiction d'entrer en contact avec le nouveau(elle) conjoint(e) du demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+AUTRE_IEC_DEM : Interdiction d'entrer en contact avec un ou plusieurs membres de la famille du demandeur (mère, père, sœur, etc.) ou amis ou témoins (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ARME_INTERDI_DEM : Interdiction de porter ou de posséder une arme et remise éventuelle à la police (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_DEM : Interdiction pour le défendeur de se rendre en certains lieux (école des enfants, domicile ou travail du demandeur, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_DOMIC_DEM : l'interdiction porte sur le domicile du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_ECOLE_DEM : l'interdiction porte sur l'école des enfants et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_W_DEM : l'interdiction porte sur le lieu de travail du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+INTERDI_AUTRE_DEM : Autre demande relative à une interdiction (hors enfants)
+0 – NON (ou non précisé)
+1 – OUI
+
+INTERDI_AUTRE_DEM_DET : si autre, préciser le autre
+	
+Demande du demandeur au JAF :
+
+RESID_SEPARE_DEM : Statuer sur la résidence séparée des époux (au sens d'entériner ou autoriser) *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ADR_INSTANCE_DEM : Dissimuler son adresse pour les besoins de l'instance (515-11 6°)
+0 – NON (ou non précisé)
+1 – OUI
+
+ADR_INSTANCE_CHEZ_DEM : l'adresse de domiciliation est chez :
+1 – avocat
+2 – procureur
+9 – autre
+X – non précisé
+
+ADR_VIE_DEM : Dissimuler son adresse pour les besoins de la vie courante (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_USAGE_DEM : Avoir la jouissance du domicile commun (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_BAIL_DEM : Attribution du droit de bail (hors 515-11e)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_PEC_FRAIS_DEM : Prise en charge par le défendeur des frais afférents au logement (515-11) ; ( si oui : hauteur de cette prise en charge par le défendeur)
+0 – Non ou non indiqué
+1 – Oui totale
+2 – Oui partielle
+3 – Oui mais ne précise pas la répartition
+
+EXPULS_LOGT_DEM : Expulsion du défendeur du domicile commun (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_AUTRE_DEM : Autre demande relative au logement
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_AUTRE_DEM_DET : si autre, préciser le autre
+	
+Demande du demandeur au JAF :
+
+PEC_SANITAIRE_DEM : Demande que le défendeur ait une prise en charge sanitaire, sociale ou psychologique ou un stage de responsabilisation pour la prévention et la lutte contre les violences au sein du couple et sexiste (515-11-2°)
+0 – NON (ou non précisé)
+1 – OUI
+
+CONTRIB_MRGE_DEM : Fixer le montant mensuel de la contribution aux charges du mariage (515-11) ou de l'aide matérielle pour les PACS (515-11) dû par le défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+CONTRIB_MRGE_DEM_MT : montant mensuel de la contribution
+
+ART_700_DEM : Paiement par le défendeur d'une somme au titre de l'article 700 du code de procédure civile (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ART_696_DEM : Condamner le défendeur aux dépens (article 696 du code de procédure civile)
+0 – NON (ou non précisé)
+1 – OUI
+
+AJ_PROV_DEM : Bénéficier de l'admission provisoire à l'aide juridictionnelle (515-11)
+0 – NON (ou non précisé)
+1 – OUI

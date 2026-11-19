@@ -1,0 +1,1579 @@
+Onglet Procédure
+
+NO_CMPST : le nom du fichier (sans le ".txt")
+
+TYP_JUR : Type de juridiction ("TJ": Tribunal Judiciaire, "TPI": Tribunal de Première Instance, "TPISD": Section Détachée du Tribunal de Première Instance, "TPRX": Tribunal de Proximité)
+
+L_COM_LOC : Libellé de la commune siège de la juridiction
+
+NO_RG : le numéro de répertoire général
+A renseigner tel qu'indiqué sur la décision, ce numéro est en grande majorité au format AA/12345
+Bien respecter ce format, ce numéro permettra l'appariement.
+Attention de ne pas saisir le numéro de minute en lieu et place du numéro RG.
+
+HC_OPVC : Décisions dans le Champ/Hors champ :
+0 - dans le champ
+1 - décision rendue avant le 1er janvier 2019 ou après le 30 juin 2021
+2 - caducité : l’action en justice valablement initiée n’a par la suite, pas respecté les contraintes de la procédure (ex : non dépôt de l’acte de saisie)
+3 - désistement : le demandeur ne souhaite pas poursuivre la procédure qu’il a initiée
+4 - renouvellement d’une mesure d’OPVC - ex : une OP a été prononcée antérieurement pour une durée de 3 mois. Il est demandé au juge de renouveler cette OP pour une nouvelle durée de 3 mois 
+5 - modification d’une mesure d’OPVC prononcée - ex : il est demandé la modification d’une mesure prononcée lors d’une OP précédente (ex : le juge avait prononcé une OP avec interdiction de s’approcher à moins de 2 kms de la personne protégée et pause d’un BAR. Il est demandé au juge d’abaisser cette distance à 1km)
+6 - suppression d’une mesure : - ex : une OP a été prononcée antérieurement avec obligation de prendre en charge les frais du logement. Il est demandé au juge de supprimer cette obligation. 
+7 - ajout d’une mesure - ex : une OP a été prononcée antérieurement accordant au défendeur un droit de visite simple pour ses enfants mineurs. La remise des enfants se passant mal en raison de conflits entre les parties, Il est demandé au juge que les enfants soient remis à l’autre parent par l’intermédiaire d’une tierce personne ou devant un commissariat (passage de bras).
+8 - dispense temporaire - ex : une OP a été prononcée antérieurement prévoyant le versement d’une CEE pour les enfants. Le débiteur rencontre des difficultés financières et il demande au juge de suspendre le versement de la CEE.
+9 - autre décision hors champ (irrecevabilité …)
+
+DA_SAISINE : date de saisine au format "aaaa-mm-jj"
+Cette date peut aussi porter le nom de « date de la requête ».
+C'est la date à laquelle le demandeur, ou le ministère public, saisit le tribunal de sa demande ou
+requête, en vue d'obtenir une ordonnance de protection.
+Nota Bene : ces 3 dates s'affichent dans un ordre différent de celui de l'outil OPVC afin de
+"coller" à la place de ces dates dans l'écriture de la décision.
+Rubriques : 7-date de décision ; 8- date d'audience et 9-date de saisine/requête
+Ces 3 dates sont obligatoires et doivent respecter la chronologie de la procédure.
+
+DA_FIX_AUDIENCE : date de l'ordonnance de fixation de la date d'audience au format "aaaa-mm-jj"
+Si DA_SAISINE < 27/05/2020 renvoyer DA_FIX_AUDIENCE = null
+Si tu ne trouves aucune date de l'ordonnance de fixation de la date d'audience, mets la même date que la date de saisine.
+
+FIX_AUDIENCE_NOTIF : Par qui la date d'audience a-t-elle été signifiée au défendeur. Cette variable s'affichera uniquement pour les affaires dont la date de saisine (DA_SAISINE) est postérieure au 27 mai 2020.
+1 - L'avocat du demandeur
+2 - Le greffe du TJ
+3 - Le ministère public
+4 - Voie administrative
+X - Non renseigné
+
+DA_AUDIENCE : date de l'audience au format "aaaa-mm-jj"
+Cette date figure sur la 1ère page de la décision.
+
+AUDIENCE_CONFIN : Si l’audience a eu lieu durant une des 3 période de confinement (de mars à mai 2020 ; d’octobre à décembre 2020 ; et d’avril à juin 2021) la variable  « En période d’urgence sanitaire, comment l’audience s’est-elle tenue » s’affiche. Il faudra alors indiquer si cette audience s’est déroulée.
+1 - Au tribunal
+2 - Par téléphone
+3 - Par visioconférence
+9 - Autre
+X - non précisé
+
+DA_DEC : date de la décision au format "aaaa-mm-jj"
+Elle apparait sur la première page de la décision et, pour être dans le champ, doit être entre le 1er janvier 2019 et le 30 juin 2021.
+
+OP_PREC_REFU : Le JAF mentionne-t-il l’existence d’une précédente demande d'OP refusée ?
+0 - NON (ou non précisé)
+1 - OUI
+
+OP_PREC_ACCOR : Le JAF mentionne-t-il l’existence d’une précédente demande d’OP accordée par le passé ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI : Y a-t-il eu au moins un renvoi de cette affaire avant cette audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_QUI : Par qui ce renvoi avait-il été demandé ?
+1 - Le demandeur seul
+2 - Le défendeur seul
+3 - Les deux (demandeur et défendeur)
+4 - Ordonné d'office par le juge
+X - Non renseigné
+
+DA_RENVOI_AUDIENCE : S'il y a eu au moins un renvoi, date de la première audience au format "aaaa-mm-jj"
+
+RENVOI_MOTIF_CONTRAD : Le renvoi de l’audience a été ordonné afin de respecter le principe du contradictoire ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_DELAI : Le renvoi de l’audience a été ordonné car le délai de 2 jours pour signifier la date d'audience n’était pas respecté ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_PIECES : Le renvoi de l’audience a été ordonné car des pièces du demandeur ont été envoyées tardivement ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_AVOCAT : Le renvoi de l’audience a été ordonné car la désignation d'un avocat était en cours ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_PARQUET : Le renvoi de l’audience a été ordonné car l’avis du parquet était absent ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_INTERP : Le renvoi de l’audience a été ordonné car il y a nécessité d'un interprète ?
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_AJ : Le renvoi de l’audience a été ordonné car la demande d’aide juridictionnelle était en cours ?
+0 - Non (non précisé)
+1 - Oui concernant le demandeur seul
+2 - Oui concernant le défendeur seul
+3 - Oui concernant les deux parties
+
+RENVOI_MOTIF_AUTRE : Le renvoi de l’audience a été ordonné pour un autre motif
+0 - NON (ou non précisé)
+1 - OUI
+
+RENVOI_MOTIF_AUTRE_DET : Précision du motif de renvoi Autre
+
+MP_ORIGINE : Le ministère public est à l'origine de la demande ?
+0 - NON (ou non précisé)
+1 - OUI
+
+MP_PRESENCE : Le jugement fait mention de la présence du ministère public à l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+MP_CONCLUSION : Quel est l’avis du ministère public (procureur de la République) sur la demande d’ordonnance de protection ? (hors mesures de bracelet anti-rapprochement)
+0 - Pas d’avis (ou non précisé)
+1 - avis favorable à l'OP
+2 - avis défavorable à l'OP
+9 - avis formulé mais neutre
+
+PRES_AUDIENCE_DEM : Présence du demandeur à l’audience ?
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+AVOC_DEM : Assistance ou représentation du demandeur par un avocat ?
+1 - OUI assisté
+2 - OUI représenté
+3 - OUI sans précision
+4 - NON, ni assisté, ni représenté
+X - Non Renseigné
+
+AJ_DEM_OK : Le demandeur bénéficie de l'AJ lors de l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+PRES_AUDIENCE_DEF : Présence du défendeur à l’audience ?
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+AVOC_DEF : Assistance ou représentation du défendeur par un avocat ?
+1 - OUI assisté
+2 - OUI représenté
+3 - OUI sans précision
+4 - NON, ni assisté, ni représenté
+X - Non Renseigné
+
+AJ_DEF_OK : Le défendeur bénéficie de l'AJ lors de l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+AUDIENCE_INTERP : Présence d'un (ou plusieurs) interprète(s) à l’audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+AUDITION_SEPARE : Le demandeur et le défendeur ont-ils été auditionnés séparément ?
+0 - NON (ou non précisé)
+1 - OUI
+
+AUDITION_SEPARE_QUI : Qui a demandé cette audition séparée ?
+1 - le demandeur seul
+2 - le défendeur seul
+3 - les 2 parties
+4 - Ordonnée d'office par le juge
+X - Non Renseigné
+
+AUDITION_ENFT : L’audition des enfants a-t-elle été demandée ?
+0 - non (ou non précisé ou sans objet)
+1 - oui pour tous les enfants
+2 - oui pour une partie des enfants
+
+TGD : Le demandeur bénéficie du téléphone grave danger au moment de l'audience ?
+0 - NON (ou non précisé)
+1 - OUI
+
+Onglet Profil Social
+
+SEXE_DEM : Sexe du demandeur
+1 - Homme
+2 - Femme
+X - Indéterminé (prénom mixte ou étranger)
+
+DA_NAIS_DEM : Date de naissance du demandeur au format "aaaa-mm-jj"
+
+PAYS_NAIS_DEM : Pays de naissance du demandeur selon la norme internationale de codification des pays ISO 3166-1. 
+Par exemple, France = "250"
+Mettre "XXX" pour non renseigné
+
+NATIO_DEM : Nationalité du demandeur
+1 - Français
+2 - Etranger
+3 - Double nationalité (FR) (français/étranger)
+X - Non renseigné
+
+DEPT_RES_DEM : Département de résidence du demandeur
+Renseigner le numéro du département, sur 3 caractères pour les dom + 999 pour étranger et XXX pour non renseigné
+
+STATUT_PRO_DEM : Statut professionnel du demandeur
+1 - en emploi
+2 - sans emploi (chômeur ou en recherche)
+3 - à la retraite
+4 - étudiant
+9 - autre (au foyer, rentier….)
+X - Non Renseigné
+
+REVENU_DEM : Revenus mensuels du demandeur : * revenu du travail (salaire …) + prestations sociales (chômage - CAF- RSA - retraite …)
+
+LOGT_TYPE_DEM :	Type de logement occupé par le demandeur au moment de l’audience (à défaut, adresse indiquée sur la décision)
+1 - logement du couple (commun avec l’autre partie)
+2 - logement séparé indépendant
+3 - hébergement provisoire (ami, famille, foyer)
+4 - A élu domicile chez avocat, procureur ou association
+9 - autre (prison, hopital …)
+X - Non Renseigné
+
+SEXE_DEF : Sexe du défendeur
+1 - Homme
+2 - Femme
+X - Indéterminé (prénom mixte ou étranger)
+
+DA_NAIS_DEF : Date de naissance du défendeur au format "aaaa-mm-jj"
+
+PAYS_NAIS_DEF : Pays de naissance du défendeur selon la norme internationale de codification des pays ISO 3166-1. 
+Par exemple, France = "250"
+Mettre "XXX" pour non renseigné
+
+VILLE_NAIS_DEF : Ville de naissance du défendeur né en France selon le code commune
+Les codes communes en France sont des identifiants uniques attribués par l'INSEE aux communes. Chaque code est constitué de 5 caractères, où les deux premiers représentent le code du département et les trois suivants le code de la commune.
+
+VILLE_NAIS_ETR_DEF : Ville de naissance du défendeur né à l’étranger
+
+NATIO_DEF :	Nationalité du défendeur
+1 - Français
+2 - Etranger
+3 - Double nationalité (FR) (français/étranger)
+X - Non renseigné
+
+DEPT_RES_DEF : Département de résidence du défendeur
+Renseigner le numéro du département, sur 3 caractères pour les dom + 999 pour étranger et XXX pour non renseigné
+	
+STATUT_PRO_DEF : Statut professionnel du défendeur
+1 - en emploi
+2 - sans emploi (chômeur ou en recherche)
+3 - à la retraite
+4 - étudiant
+9 - autre (au foyer, rentier….)
+X - Non Renseigné
+
+REVENU_DEF : Revenus mensuels du défendeur : * revenu du travail (salaire …) + prestations sociales (chômage - CAF- RSA - retraite …)
+	
+LOGT_TYPE_DEF : Type de logement occupé par le défendeur au moment de l’audience (à défaut, adresse indiquée sur la décision)
+1 - logement du couple (commun avec l’autre partie)
+2 - logement séparé indépendant
+3 - hébergement provisoire (ami, famille, foyer)
+4 - A élu domicile chez avocat, procureur ou association
+9 - autre (prison, hopital …)
+X - Non Renseigné	
+
+STATUT_JUR_COUPLE : Statut juridique du couple au moment des faits
+11 - Mariés
+12 - Pacsés
+13 - Concubins
+21 - Divorcés
+22 - Dépacsés
+23 - Séparés
+31 - Couple n’ayant jamais cohabité
+99 - Autre
+XX - Non précisé
+
+AN_MARIAGE_COUPLE : Année de mariage
+
+AN_PACS_COUPLE : Année du pacs
+
+DIVORCE_ENCOURS_COUPLE : Il est fait mention d'une procédure de divorce ou de dissolution de PACS en cours
+0 - NON (ou non précisé)
+1 - OUI
+	
+ENFT : Le couple a-t-il un ou des enfants communs
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+ENFT_NB	: Nombre d'enfants issus du couple
+
+ENFT_MIN : Le couple a-t-il des enfants mineurs
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+ENFT_MIN_NB : Nombre d'enfants mineurs issus du couple
+
+ENFT_MAJ : Le couple a-t-il des enfants majeurs
+0 - NON
+1 - OUI
+X - Non Renseigné
+
+ENFT_MAJ_NB : Nombre d'enfants majeurs issus du couple
+
+ENFT_MINI_AN_NAIS : Année de naissance de l'enfant du couple ou du plus jeune si plusieurs
+
+ENFT_MAXI_AN_NAIS : Année de naissance de l'enfant le plus âgé issu du couple
+
+ENFT_GROSSESSE : Il est fait mention d'une grossesse en cours
+0 - NON (ou non précisé)
+1 - OUI
+
+ENFT_HORS_UNION_DEM : Il est fait mention d'enfant(s) du demandeur nés en dehors de cette union
+0 - NON (ou non précisé)
+1 - OUI
+
+ENFT_MESURE_SOCIOEDUC : Un ou plusieurs enfants font ou ont fait l'objet de mesures socio-éducatives (AEMO-ASE) ou de mesures d'investigation (RRSE-MJIE) ou d'une mesure d'assistance éducative
+0 - NON (ou non précisé)
+1 - OUI
+
+ENFT_PROC_JAF : Il est fait mention d'une procédure en cours auprès du JAF au sujet des enfants du couple (divorce ou enfants)
+0 - NON (ou non précisé)
+1 - OUI
+	
+ADDICT_STUP_DEM : Le demandeur consomme des stupéfiants
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+ADDICT_ALCOOL_DEM : Le demandeur connaît des problèmes d'alcool
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+PATHO_PSY_DEM : Le demandeur souffre d'une pathologie psychiatrique
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+DEPRESSION_DEM : Le demandeur est en dépression ou a fait une tentative de suicide
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+	
+ADDICT_STUP_DEF : Le défendeur consomme des stupéfiants
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+ADDICT_ALCOOL_DEF : Le défendeur connaît des problèmes d'alcool
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+PATHO_PSY_DEF : Le défendeur souffre d'une pathologie psychiatrique
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+DEPRESSION_DEF : Le défendeur est en dépression ou a fait une tentative de suicide
+0 - Non (ou non précisé)
+1 - évoqué par le demandeur mais pas retenu par le JAF
+2 - évoqué par le défendeur mais pas retenu par le JAF
+3 - évoqué par le demandeur et le défendeur mais pas retenu par le JAF
+4 - évoqué par le demandeur et retenu par le JAF
+5 - évoqué par le défendeur et retenu par le JAF
+6 - évoqué par le demandeur et le défendeur et retenu par le JAF
+7 - retenu par le JAF sans précision sur l'origine de l'info
+
+Onglet Violences dénoncées
+
+le demandeur dénonce :
+
+PHYS_DEM_DENONC : Des violences physiques sur le demandeur (coups de poing, pied, tête, gifle, etc.) avec ou sans arme
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_DEM_DENONC :	Des menaces de violences physiques envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_MORT_DEM_DENONC : S’agit-il de menaces de mort envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ARME_DEM_DENONC : S’agit-il de menaces avec usage d’une arme (blanche ou à feu)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_DEM_DENONC : Des violences psychologiques sur le demandeur (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_HARCEL_DEM_DENONC : S’agit-il d’un harcèlement téléphonique ou via réseaux sociaux
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_CONTROL_DEM_DENONC : S’agit-il de comportements de contrôle de la part du défendeur (autoritarisme, restriction de liberté, sélection des fréquentations, des vêtements, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_DEM_DENONC : Des violences sexuelles sur le demandeur (viols et/ou autres agressions sexuelles)
+0 – NON (ou non précisé)
+1 – OUI
+
+ECONOMIC_DEM_DENONC : Des violences économiques (vol d'argent, retrait de la carte, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VOLPAPIER_DEM_DENONC : Des vols de papiers d'identité et/ou de titre de séjour et/ou permis de conduire
+0 – NON (ou non précisé)
+1 – OUI
+
+INTRUSION_DEM_DENONC : Des intrusions ou tentatives d'intrusion sur l'actuel lieu de résidence du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+DEGRAD_DEM_DENONC : Des dégradations matérielles (véhicule, portable, meubles, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PHYS_ENFT_DENONC : Des violences physiques sur ses enfants (coups de poing, pied, tête, gifle, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ENFT_DENONC : Des menaces de violences physiques envers ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_ENFT_DENONC : Des violences psychologiques sur ses enfants (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_ENFT_DENONC : Des violences sexuelles sur ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENLEVT_ENFT_DENONC : L'enlèvement ou des menaces d'enlèvement de ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+	
+VIOLENCE_DEBUT_DENONC : Moment où les violences dénoncées ont débuté
+1 - Durant la période de vie du couple (physique ou affective)
+2 - Au moment de la rupture du couple (physique ou affective)
+3 - Après la rupture du couple (physique ou affective)
+X – Non Renseigné
+
+Selon les dires du demandeur, certains faits de violence dénoncés se sont déroulés :
+
+LIEU_DOM_COMMUN_DENONC : Au domicile commun du couple
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_DOM_DEM_DENONC : Au domicile du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_DOM_DEF_DENONC : Au domicile du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_W_DEM_DENONC : Sur le lieu de travail du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_PUBLIC_DENONC : Dans l'espace public
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_TIERS_DENONC : Chez un tiers
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_ENFT_DENONC : Les enfants ont été témoins des violences
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_NOUV_CONJ_DENONC : Le nouveau conjoint du demandeur a été témoin des violences
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_PROCHE_DENONC : Un proche (ami ou famille) du demandeur a été témoin des violences
+0 – NON (ou non précisé)
+1 – OUI
+
+TEMOIN_AUTRE_DENONC : Les violences ont été commises en présence d'autres personnes que les personnes précitées
+0 – NON (ou non précisé)
+1 – OUI	
+	
+Le début ou le renforcement des violences a t’il pour contexte :
+
+DEBUT_SEPAR_DENONC : L'annonce de la séparation
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_GROSSESSE_DENONC : L'annonce d'une grossesse ou la naissance d'un enfant
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_ENFT_DENONC : Un conflit lié aux enfants (éducation, droit de visite, etc.)
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_ADDICT_DENONC : Une consommation d'alcool ou de stupéfiants
+0 – NON (ou non précisé)
+1 – OUI	
+
+DEBUT_CONFINE_DENONC : La période de confinement
+0 – NON (ou non précisé)
+1 – OUI	
+	
+PREUV_PLAINTE_AVANT : Le demandeur a déjà porté plainte pour d'autres faits violences antérieurs (procès verbal)
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_PLAINTE_AVANT_NB : Nombre de plaintes mentionnées dans le jugement   
+
+PREUV_PLAINTE_ACTUEL : Le demandeur a porté plainte pour les faits de violences actuellement dénoncés (procès verbal)
+0 – NON (ou non précisé)
+1 – OUI	
+
+Le jugement fait il mention :
+
+PREUV_MAIN_COURANTE : D’une ou plusieurs mains courantes
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_CERTIF_IML : D’un ou plusieurs certificats médicaux de l'IML ou de l'UMJ *bulle
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_CERTIF_MED : D’un ou plusieurs certificats médicaux du médecin traitant ou d'origine non précisée
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_PROCHE_ASSIST : De témoignages de proches ou voisins ayant assisté aux violences
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_W_SOCIAL : De témoignages de travailleurs sociaux
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_PROCHE_NON_ASSIST : De témoignages de proches ou voisins n'ayant pas assisté aux violences mais ayant constaté des traces de coups ou recueilli les aveux du défendeur
+0 – NON (ou non précisé)
+1 – OUI	
+
+PREUV_TEMOIN_ENFT : Du témoignage des enfants (du couple et/ou du demandeur)
+0 – NON (ou non précisé)
+1 – OUI	
+
+Onglet Demandes
+
+MOTIV_DEM : Le jugement mentionne que le demandeur demande une OP pour
+1 – se protéger et protéger ses enfants
+2 – se protéger seul(e)
+3 – protéger ses enfants uniquement
+9 – autre motif
+X – motif non précisé
+
+MOTIV_DEM_DET : si autre motif, précisez le autre
+	
+Demande du demandeur au JAF (situation de l'enfant le plus jeune si demandes différentes) :
+	
+ENFT_IEC_TOT_DEM : 110 - Interdiction totale pour le défendeur d'entrer en contact avec les enfants communs mineurs (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_IEC_MEDIA_SUBS_DEM	: 115 (liée à 110) - Demande subsidiaire en cas de refus IEC totale : interdiction d'entrer en contact avec les enfants mineurs en dehors du droit de visite médiatisé *(espace rencontre, lieu neutre, présence d’un tiers)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_IEC_MEDIA_DEM : 120 - Instauration d'un droit de visite en espace rencontre ou lieu neutre pour le défendeur avec interdiction d'entrer en contact *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_MEDIA_DEM : 130 - Instauration d'un droit de visite en espace rencontre ou lieu neutre ou en présence d’un tiers pour le défendeur sans interdiction d'entrer en contact *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_VISIT_SUBS_DEM : 135 (liée à 120 et 130) - Demande subsidiaire en cas de refus de droit de visite médiatisé : fixer les modalités du droit de visite simple (sans hébergement) des enfants mineurs
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_VISIT_DEM : 140 - Instauration d'un droit de visite simple sans droit d'hébergement *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_DVH_DEM : 150 - Instauration d'un droit de visite et d'hébergement
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_PASS_BRAS_DEM : 160 - Fixation des modalités du passage de bras (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_RESERVE_DEM : 170 - Suspension ou réserve du droit de visite et d'hébergement du défendeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_REVISION_DEM : 180 - Révision d'un droit de visite et/ou d'hébergement déjà fixé
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_AUTRE_DEM : 190 - Autre demande relative au droit d’hébergement et de visite des enfants mineurs
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_AUTRE_DEM_DET : si autre demande, précisez le autre
+
+Demandes du demandeur au JAF :
+
+ENFT_AP_CONJ_DEM : Constater et statuer sur l'exercice conjoint de l'autorité parentale (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_AP_DEM_DEM : Fixer l'exercice exclusif de l'autorité parentale au profit du demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_RESID_DEM_DEM : Fixer la résidence principale des enfants communs au domicile du demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_CEE_DEM : Fixer le montant de la contribution à l'entretien des enfants  (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_CEE_DEM_MT : Montant mensuel de la contribution à l'entretien des enfants demandé (par enfant)
+
+ENFT_SORTIE_TERR_DEM : Ordonner l'interdiction de sortie du territoire des enfants sans l'autorisation du demandeur avec inscription au fichier des personnes recherchées
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_EXPERT_PSY_DEM : Ordonner une expertise psychologique du ou des enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_INVESTIG_DEM : Ordonner une mesure d'investigation *(enquête sociale, expertise)
+0 – NON (ou non précisé)
+1 – OUI
+	
+Demandes du demandeur au JAF (situation de l'enfant le plus jeune si demandes différentes) :
+
+ENFT_MAJ_IEC_DEM : Interdiction totale pour le défendeur d'entrer en contact avec le ou les enfants communs majeurs (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+	
+Demandes du demandeur au JAF :
+
+DEM_IEC_DEM : Interdiction d'entrer en contact avec le demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+NOUV_CONJ_IEC_DEM : Interdiction d'entrer en contact avec le nouveau(elle) conjoint(e) du demandeur (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+AUTRE_IEC_DEM : Interdiction d'entrer en contact avec un ou plusieurs membres de la famille du demandeur (mère, père, sœur, etc.) ou amis ou témoins (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ARME_INTERDI_DEM : Interdiction de porter ou de posséder une arme et remise éventuelle à la police (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_DEM : Interdiction pour le défendeur de se rendre en certains lieux (école des enfants, domicile ou travail du demandeur, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_DOMIC_DEM : l'interdiction porte sur le domicile du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_ECOLE_DEM : l'interdiction porte sur l'école des enfants et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_W_DEM : l'interdiction porte sur le lieu de travail du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+INTERDI_AUTRE_DEM : Autre demande relative à une interdiction (hors enfants)
+0 – NON (ou non précisé)
+1 – OUI
+
+INTERDI_AUTRE_DEM_DET : si autre, préciser le autre
+	
+Demande du demandeur au JAF :
+
+RESID_SEPARE_DEM : Statuer sur la résidence séparée des époux (au sens d'entériner ou autoriser) *(515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ADR_INSTANCE_DEM : Dissimuler son adresse pour les besoins de l'instance (515-11 6°)
+0 – NON (ou non précisé)
+1 – OUI
+
+ADR_INSTANCE_CHEZ_DEM : l'adresse de domiciliation est chez :
+1 – avocat
+2 – procureur
+9 – autre
+X – non précisé
+
+ADR_VIE_DEM : Dissimuler son adresse pour les besoins de la vie courante (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_USAGE_DEM : Avoir la jouissance du domicile commun (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_BAIL_DEM : Attribution du droit de bail (hors 515-11e)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_PEC_FRAIS_DEM : Prise en charge par le défendeur des frais afférents au logement (515-11) ; ( si oui : hauteur de cette prise en charge par le défendeur)
+0 – Non ou non indiqué
+1 – Oui totale
+2 – Oui partielle
+3 – Oui mais ne précise pas la répartition
+
+EXPULS_LOGT_DEM : Expulsion du défendeur du domicile commun (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_AUTRE_DEM : Autre demande relative au logement
+0 – NON (ou non précisé)
+1 – OUI
+
+LOGT_AUTRE_DEM_DET : si autre, préciser le autre
+	
+Demande du demandeur au JAF :
+
+PEC_SANITAIRE_DEM : Demande que le défendeur ait une prise en charge sanitaire, sociale ou psychologique ou un stage de responsabilisation pour la prévention et la lutte contre les violences au sein du couple et sexiste (515-11-2°)
+0 – NON (ou non précisé)
+1 – OUI
+
+CONTRIB_MRGE_DEM : Fixer le montant mensuel de la contribution aux charges du mariage (515-11) ou de l'aide matérielle pour les PACS (515-11) dû par le défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+CONTRIB_MRGE_DEM_MT : montant mensuel de la contribution
+
+ART_700_DEM : Paiement par le défendeur d'une somme au titre de l'article 700 du code de procédure civile (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ART_696_DEM : Condamner le défendeur aux dépens (article 696 du code de procédure civile)
+0 – NON (ou non précisé)
+1 – OUI
+
+AJ_PROV_DEM : Bénéficier de l'admission provisoire à l'aide juridictionnelle (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+Onglet Réponses sur violences
+
+REP_VIOLENCE : Le jugement fait mention de la réponse du défendeur aux accusations du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+	
+Réponse du défendeur aux accusations du demandeur sur :
+
+PHYS_DEM_REPDEF : Des violences physiques sur le demandeur (coups de poing, pied, tête, gifle, etc.) avec ou sans arme
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_DEM_REPDEF : Des menaces de violences physiques envers le demandeur
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_MORT_DEM_REPDEF : Des menaces de mort envers le demandeur
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_ARME_DEM_REPDEF : Des menaces avec usage d’une arme (blanche ou à feu)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_DEM_REPDEF : Des violences psychologiques sur le demandeur (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_HARCEL_DEM_REPDEF : Du harcèlement téléphonique ou via réseaux sociaux
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_CONTROL_DEM_REPDEF : Des comportements de contrôle de la part du défendeur (autoritarisme, restriction de liberté, sélection des fréquentations, des vêtements, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+SEXUEL_DEM_REPDEF : Des violences sexuelles sur le demandeur (viols et/ou autres agressions sexuelles)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+ECONOMIC_DEM_REPDEF : Des violences économiques (vol d'argent, retrait de la carte, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+VOLPAPIER_DEM_REPDEF : Des vols de papiers d'identité et/ou de titre de séjour et/ou permis de conduire
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+INTRUSION_DEM_REPDEF : Des intrusions ou tentatives d'intrusion sur l'actuel lieu de résidence du demandeur
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+DEGRAD_DEM_REPDEF : Des dégradations matérielles (véhicule, portable, meubles, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PHYS_ENFT_REPDEF : Des violences physiques sur ses enfants (coups de poing, pied, tête, gifle, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+MENACE_ENFT_REPDEF : Des menaces de violences physiques envers ses enfants
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+PSY_ENFT_REPDEF : Des violences psychologiques sur ses enfants (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+SEXUEL_ENFT_REPDEF : Des violences sexuelles sur ses enfants
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+ENLEVT_ENFT_REPDEF : L'enlèvement ou des menaces d'enlèvement de ses enfants
+1 - reconnaît totalement
+2 - reconnaît partiellement
+3 – reconnaît totalement ou partiellement mais évoque la réciprocité
+5 - dément
+6 - dément et retourne les accusations sur le demandeur
+X - non précisé
+
+Le défendeur reconnaît que :
+	
+TEMOIN_ENFT_REPDEF : Les enfants ont été témoins des violences
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+
+TEMOIN_NOUV_CONJ_REPDEF : Le nouveau conjoint du demandeur a été témoin des violences
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+
+TEMOIN_PROCHE_REPDEF : Un proche (ami ou famille) du demandeur a été témoin des violences
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+
+TEMOIN_AUTRE_REPDEF : Les violences ont été commises en présence d'autres personnes que les personnes précitées
+0 – Non dément (les faits)
+1 – Oui reconnaît (y compris partiellement)
+X – non précisé
+	
+TENSION_OK_DEF : Le défendeur reconnaît l'existence de tensions, conflits dans le couple
+0 – NON (ou non précisé)
+1 – OUI
+
+ILLEGAL_OK_DEF : Le défendeur reconnaît le caractère illégal / problématique/inexcusable de ses actes
+0 – NON (ou non précisé)
+1 – OUI
+
+MINIM_JUSTIF_DEF : Le défendeur tente de minimiser ou de justifier ses actes
+0 – NON (ou non précisé)
+1 – OUI
+
+DIVORCE_OK_DEF : Le défendeur se dit d'accord pour la séparation/le divorce
+0 – NON (ou non précisé)
+1 – OUI
+
+Onglet Réponses sur demandes
+
+POSTURE_FORME : Position du défendeur à l'égard de l'ordonnance de protection demandée
+0 - s'y oppose
+1 – y est favorable
+2 – s'en remet à la décision du juge
+X – non précisé
+
+POSTURE_FOND : Le défendeur s'oppose sur le fond à l'OP (irrecevabilité, nullité, caducité …)
+0 – NON (ou non précisé)
+1 – OUI
+
+REP_DEMANDE : Le jugement fait mention de la réponse du défendeur sur les demandes du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+	
+Enfants mineurs du couple - position du défendeur vis à vis des demandes du demandeur et demandes du défendeur * (situation de l'enfant le plus jeune si demandes différentes) :
+
+ENFT_HEBERG_POS : Le droit de visite et/ou d'hébergement des enfants mineurs
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_HEBERG_DEF : Le défendeur demande à bénéficier :
+1 – d'un droit de visite médiatisé
+2 – d'un droit de visite sans hébergement
+3 - d'un droit de visite et d'hébergement classique (1 week-end sur 2 et la moitié des vacances scolaires)
+4 – d'un autre type de droit de visite et d'hébergement
+X – non précisé
+
+ENFT_PASS_BRAS_DEF : La fixation des conditions du passage de bras
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_AP_POS : L’exercice de l'autorité parentale
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_RESID_DEM_POS : La fixation de la résidence principale des enfants chez le demandeur
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+ENFT_RESID_DEM_DEF : Quelle est la demande du défendeur en matière de résidence habituelle des enfants
+1 – résidence alternée
+2 – résidence principale chez le défendeur
+3 - Résidence principale chez le demandeur
+4 – résidence principale chez un tiers
+5 – résidence en foyer
+9 – résidence autre
+X – non précisé
+
+ENFT_CEE_DEF_MT : Montant mensuel proposé par le défendeur pour la contribution à l'entretien des enfants (par enfant)
+
+Logement commun : position du défendeur vis à vis de :
+
+RESID_SEPARE_POS : La résidence séparée
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+LOGT_POS : La jouissance du domicile commun ou à l'attribution du droit de bail au demandeur
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+LOGT_PEC_FRAIS_POS : La prise en charge par le défendeur des frais afférents au logement commun.
+0 – s'oppose
+1 – accepte
+2 – propose une contribution autre que celle demandée
+X – non précisé
+	
+Autres demandes exprimées par le demandeur, position du défendeur vis à vis de :
+
+PEC_SANITAIRE_POS : La demande  de sa prise en charge sanitaire, sociale ou psychologique ou un stage de responsabilisation pour la prévention et la lutte contre les violences au sein du couple et sexiste (515-11-2°)
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+CONTRIB_MRGE_POS : La contribution aux charges du mariage (515-11) ou de l'aide matérielle pour les PACS (515-11)
+0 – s'oppose
+1 – accepte
+2 – propose une contribution autre que celle demandée
+X – non précisé
+
+CONTRIB_MRGE_DEF_MT : Montant mensuel de la contribution proposée par le défendeur
+	
+Le défendeur exprime t’il les demandes suivantes :
+	
+ART_700_DEF : Le paiement par le demandeur d'une somme au titre de l'article 700 du code de procédure civile (hors 515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_SORTIE_TERR_DEF : L’interdiction de sortie du territoire des enfants communs sans l'autorisation des 2 parents
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_EXPERT_PSY_DEF : Une expertise psychologique du ou des enfants mineurs communs
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_INVESTIG_DEF : Une mesure d'investigation (enquête sociale, expertise)
+0 – NON (ou non précisé)
+1 – OUI
+
+AJ_PROV_DEF : L’admission à l'AJ provisoire
+0 – NON (ou non précisé)
+1 – OUI
+
+Onglet Violences retenues JAF
+
+Le JAF considère comme vraisemblables ou avérées :
+
+PHYS_DEM_RETENU : Des violences physiques sur le demandeur (coups de poing, pied, tête, gifle, etc.) avec ou sans arme
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_DEM_RETENU : Des menaces de violences physiques envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_MORT_DEM_RETENU : S’agit-il de menaces de mort envers le demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ARME_DEM_RETENU : S’agit-il de menaces avec usage d’une arme (blanche ou à feu)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_DEM_RETENU : Des violences psychologiques sur le demandeur (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_HARCEL_DEM_RETENU : S’agit-il d’un harcèlement téléphonique ou via réseaux sociaux
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_CONTROL_DEM_RETENU : S’agit-il de comportements de contrôle de la part du défendeur (autoritarisme, restriction de liberté, sélection des fréquentations, des vêtements, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_DEM_RETENU : Des violences sexuelles sur le demandeur (viols et/ou autres agressions sexuelles)
+0 – NON (ou non précisé)
+1 – OUI
+
+ECONOMIC_DEM_RETENU : Des violences économiques (vol d'argent, retrait de la carte, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VOLPAPIER_DEM_RETENU : Des vols de papiers d'identité et/ou de titre de séjour et/ou permis de conduire
+0 – NON (ou non précisé)
+1 – OUI
+
+INTRUSION_DEM_RETENU : Des intrusions ou tentatives d'intrusion sur l'actuel lieu de résidence du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+DEGRAD_DEM_RETENU : Des dégradations matérielles (véhicule, portable, meubles, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+	
+PHYS_ENFT_RETENU : Des violences physiques sur ses enfants (coups de poing, pied, tête, gifle, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+MENACE_ENFT_RETENU : Des menaces de violences physiques envers ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+PSY_ENFT_RETENU : Des violences psychologiques sur ses enfants (harcèlement, contrôle, répétition de brimades, insultes, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+SEXUEL_ENFT_RETENU : Des violences sexuelles sur ses enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENLEVT_ENFT_RETENU : L'enlèvement ou des menaces d'enlèvement des enfants
+0 – NON (ou non précisé)
+1 – OUI
+	
+Le JAF fait état du caractère avéré ou vraisemblable :
+
+TENSION_RETENU : Des conflits/tensions/disputes
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_RECIPROC_RETENU : De l’existence de violences physiques et/ou psychologiques réciproques au sein du couple
+0 – NON (ou non précisé)
+1 – OUI
+
+DANGER_RETENU : Du danger encouru par le demandeur ("danger", "risque de passage à l'acte", "risque de récidive", etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENT_DEF_RETENU : Du caractère violent du défendeur (inclinaison, tempérament, penchants, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_REPETE_RETENU : Du caractère habituel ou répété des violences dénoncées
+0 – NON (ou non précisé)
+1 – OUI
+	
+SEPAR_CONFLIT_RETENU : Le JAF note que les violences rapportées s'inscrivent dans le cadre d'une séparation conflictuelle (idée de violence inédite et réactionnelle)
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_FIN_SEPARE_RETENU : Le JAF note que les violences ont cessé depuis la séparation du couple
+0 – NON (ou non précisé)
+1 – OUI
+
+VIOLENCE_ANCIEN_RETENU : Le JAF note que les derniers faits de violences avérés ou vraisemblables sont anciens
+0 – NON (ou non précisé)
+1 – OUI
+	
+MENSONGE_DEM_RETENU : Le JAF note ou soupçonne des mensonges dans les propos du demandeur (instrumentalisation pour disposer du logement, pour obtenir la garde des enfants, obtenir un titre de séjour, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+NERVEUX_DEM_RETENU : Le JAF note de l'agressivité dans le comportement du demandeur
+0 – NON (ou non précisé)
+1 – OUI
+
+REPONSE_EVASIVE_DEM_RETENU : Le JAF note que le demandeur n'a pas répondu à certaines de ses questions ou n'a pas été clair
+0 – NON (ou non précisé)
+1 – OUI
+
+PAS_DIVORCE_DEM_RETENU : Le JAF note que le demandeur n'a pas initié de procédure de divorce ou de dissolution de PACS depuis les faits
+0 – NON (ou non précisé)
+1 – OUI
+
+MENSONGE_DEF_RETENU : Le JAF note ou soupçonne des mensonges dans les propos du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+NERVEUX_DEF_RETENU : Le JAF note l'agressivité dans le comportement du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+REPONSE_EVASIVE_DEF_RETENU : Le JAF note que le défendeur n'a pas répondu à certaines de ses questions ou n'a pas été clair
+0 – NON (ou non précisé)
+1 – OUI
+
+PB_PARENT_DEF_RETENU : Le JAF remet en cause les qualités parentales du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+PB_PSY_DEF_RETENU : Le Jaf souligne la fragilité psychologique du défendeur
+0 – NON (ou non précisé)
+1 – OUI
+
+PRISON_DEF : Le JAF note que le défendeur est actuellement emprisonné
+0 – NON (ou non précisé)
+1 – OUI
+
+HOPITAL_DEF : Le JAF note que le défendeur est actuellement hospitalisé
+0 – NON (ou non précisé)
+1 – OUI
+	
+PASSE_VCONJ_CONDA : Le défendeur a déjà été condamné pénalement pour des faits de violences sur conjoint (actuel ou précédent)
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VCONJ_CONDA_NB : Nombre de condamnations
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VCONJ_PRISON : Le défendeur a déjà été incarcéré pour des faits de violences sur conjoint (actuel ou précédent)
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VCONJ_MAP : Le défendeur a déjà fait l'objet d'un rappel à la loi ou de mesures alternatives aux poursuites pour des faits de violences sur conjoint (actuel ou précédent)
+0 – NON (ou non précisé)
+1 – OUI
+
+PASSE_VENFT_CONDA_MAP : Le défendeur a déjà été condamné pénalement ou fait l'objet d'un rappel à la loi ou de mesures alternatives aux poursuites pour des faits de violences sur des enfants (au sens large) *(enfants communs, du seul demandeur, du seul défendeur ou autres enfants)
+0 – NON (ou non précisé)
+1 – OUI
+
+PROCES_ENCOURS : Le défendeur fait actuellement l’objet d’une procédure judiciaire (contrôle judiciaire, COPJ, enquête de police en cours, etc.)
+0 – NON (ou non précisé)
+1 – OUI
+
+PROCES_ENCOURS_LIEN_OP : Cette procédure judiciaire est-elle en lien avec les faits relatés dans la présente demande d’OP
+0 – NON (ou non précisé)
+1 – OUI
+
+PROCES_ENCOURS_PREVENTIVE : Le défendeur est actuellement incarcéré dans le cadre de cette procédure
+0 – NON (ou non précisé)
+1 – OUI
+
+PRISON_ENCOURS_AUTRE : Le défendeur est actuellement incarcéré pour une autre raison
+0 – NON (ou non précisé)
+1 – OUI
+
+Onglet Décision JAF
+
+ACCORD : L'ordonnance de protection est accordée par le JAF
+0 – NON (ou non précisé)
+1 – OUI
+
+RENVOI_FOND : Le juge renvoie-t’il les parties à une audience dont il fixe la date pour qu'il soit statué au fond sur les modalités de l'exercice de l'autorité parentale et la contribution à l'entretien et l'éducation de l'enfant
+0 – NON (ou non précisé)
+1 – OUI
+
+OP_DUREE : Durée de la mesure (en mois)
+
+ART_696_DEC : Condamnations aux dépens (article 696 du code de procédure civile) sont à la charge
+1 – du demandeur
+2 – du défendeur
+3 – partagés entre demandeur et défendeur
+9 – ni l'un ni l'autre (réserve)
+X – non statué
+
+Décision du Jaf (situation de l'enfant le plus jeune si décisions différentes selon les enfants) :
+
+ENFT_IEC_TOT_DEC : 110 - Interdiction totale pour le défendeur d'entrer en contact avec les enfants communs mineurs (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_IEC_MEDIA_DEC : 120 - Instauration d'un droit de visite en espace rencontre ou lieu neutre pour le défendeur avec interdiction d'entrer en contact (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_MEDIA_DEC : 130 - Instauration d'un droit de visite en espace rencontre ou lieu neutre ou en présence d’un tiers pour le défendeur sans interdiction d'entrer en contact (515-11)
+0 – rejeté
+1 – accordé en présence d'un tiers
+2 – accordé en espace rencontre ou lieu neutre
+X – non statué
+
+ENFT_VISIT_DEC : 140 - Instauration d'un droit de visite simple sans droit d'hébergement (515-11)
+0 – rejeté
+1 – accordé en présence d'un tiers
+2 – accordé chez le demandeur
+3 - accordé sans condition
+9 - accordé avec autre condition/contrainte…
+X – non statué
+
+ENFT_DVH_DEC : 150 - Instauration d'un droit de visite et d'hébergement
+0 – rejeté
+1 – accordé classique (1/2 WE et 1/2 vacances)
+2 – accordé élargi (plus que 1/2 WE et ou plus de 1/2 vacances)
+3 – accordé restreint (moins que1/2 WE et/ou moins de 1/2 vacances)
+X – non précisé
+
+ENFT_PASS_BRAS_DEC : 160 - Fixation des modalités du passage de bras (515-11)
+0 – rejeté
+1 – accordé en présence d'un tiers
+2 – accordé en espace rencontre
+3 – accordé à l’école
+4 – accordé sur le parking de la gendarmerie ou du commissariat
+5 – accordé lieu public fréquenté
+9 – accordé autre
+X – non statué
+
+ENFT_RESERVE_DEC : 170 - Suspension ou réserve du droit de visite et d'hébergement du défendeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_REVISION_DEC : 180 - Révision d'un droit de visite et/ou d'hébergement déjà fixé
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_AUTRE_DEC : 190 - Autre demande relative au droit d’hébergement et de visite des enfants mineurs
+0 – rejeté
+1 – accordé
+X – non statué
+
+Décision du Jaf concernant les enfants mineurs du couple (situation de l'enfant le plus jeune si décisions différentes selon les enfants) :
+
+ENFT_AP_CONJ_DEC : Constate ou statue sur l'exercice conjoint de l'autorité parentale (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_AP_DEM_DEC : Fixe l'exercice exclusif de l'autorité parentale au profit du demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_RESID_DEM_DEC : Fixe la résidence principale des enfants communs au domicile du demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_RESID_DEC : Lieu de résidence fixée par le juge
+1 – résidence alternée
+2 – résidence principale chez le défendeur
+3 - Résidence principale chez le demandeur
+4 – résidence principale chez un tiers
+5 – résidence en foyer
+9 – résidence autre
+X – non précisé
+
+ENFT_CEE_DEC : Fixe le montant de la contribution à l'entretien des enfants  (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ENFT_CEE_VIA_DEC : Le JAF ordonne-t’il le versement de la CEE par l'intermédiaire de l'organisme débiteur des prestations familiales
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_CEE_DEC_MT : Montant mensuel de la contribution à l'entretien des enfants décidé (par enfant)
+
+A la demande du demandeur, du défendeur ou de son propre chef, le JAF :
+
+ENFT_SORTIE_TERR_DEC : Ordonne l'interdiction de sortie du territoire des enfants sans l'autorisation d’un ou des deux parents
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_EXPERT_PSY_DEC : Ordonne une expertise psychologique du ou des enfants
+0 – NON (ou non précisé)
+1 – OUI
+
+ENFT_INVESTIG_DEC : Ordonne une mesure d'investigation (enquête sociale, expertise)
+0 – NON (ou non précisé)
+1 – OUI
+
+Décision du Jaf concernant les enfants majeurs du couple (situation de l'enfant le plus jeune si décisions différentes selon les enfants) :
+
+ENFT_MAJ_IEC_DEC : Interdiction totale pour le défendeur d'entrer en contact avec le ou les enfants communs majeurs (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+Décisions du JAF concernant les demandes d’interdiction :
+
+DEM_IEC_DEC : Interdiction d'entrer en contact avec le demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+NOUV_CONJ_IEC_DEC : Interdiction d'entrer en contact avec le nouveau(elle) conjoint(e) du demandeur (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+AUTRE_IEC_DEC : Interdiction d'entrer en contact avec un ou plusieurs membres de la famille du demandeur (mère, père, sœur, etc.) ou amis ou témoins (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ARME_INTERDI_DEC : Interdiction de porter ou de posséder une arme et remise éventuelle à la police (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LIEU_INTERDI_DEC : Interdiction pour le défendeur de se rendre en certains lieux (école des enfants, domicile ou travail du demandeur, etc.)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LIEU_INTERDI_DOMIC_DEC : l'interdiction porte sur le domicile du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_ECOLE_DEC : l'interdiction porte sur l'école des enfants et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+LIEU_INTERDI_W_DEC : l'interdiction porte sur le lieu de travail du demandeur et ses alentours
+0 – NON (ou non précisé)
+1 – OUI
+
+INTERDI_AUTRE_DEC : Autre demande relative à une interdiction (hors enfants)
+0 – rejeté
+1 – accordé
+X – non statué
+
+Décisions du JAF concernant les demandes relatives au logement :
+
+RESID_SEPARE_DEC : Enregistrement de la résidence séparée des époux (au sens d'entériner et autoriser) (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ADR_INSTANCE_DEC : Dissimulation de l'adresse du demandeur pour les besoins de l'instance (515-11 6°)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ADR_VIE_DEC : Dissimulation de l'adresse du demandeur pour les besoins de la vie courante (515-11-6°bis)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LOGT_USAGE_DEC : Attribution au demandeur de la jouissance du domicile commun (515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LOGT_BAIL_DEC : Attribution au demandeur du droit de bail (hors 515-11)
+0 – rejeté / avis défavorable
+1 – accordé / avis favorable
+5 – déclare la demande irrecevable ou se déclare incompétent
+X – non statué
+
+LOGT_PEC_FRAIS_DEC : Prise en charge (totale ou partielle) par le défendeur des frais afférents au logement (515-11)
+0 – rejeté
+1 - Accordée, avec répartition telle que demandée
+2 - Accordée, mais répartition différente de celle demandée
+3 - Accordée (sans montant demandé)
+X – non statué
+
+EXPULS_LOGT_DEC : Expulsion du défendeur du domicile commun (hors 515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+LOGT_AUTRE_DEC : Décision sur d'autre(s) demande(s) relative(s) )au logement
+0 – rejeté(s) / avis défavorable(s)
+1 – accordé / avis favorable(s)
+5 – déclare la (les) demande(s) irrecevable(s) ou se déclare incompétent
+9 – avis différents selon les demandes
+X – non statué
+
+Décisions du JAF concernant les autres demandes du demandeur et/ou du défendeur :
+
+PEC_SANITAIRE_DEC : Ordonne que le défendeur ait une prise en charge sanitaire, sociale ou psychologique ou un stage de responsabilisation pour la prévention et la lutte contre les violences au sein du couple et sexiste (515-11-2°)
+0 – rejeté
+1 – accordé
+X – non statué
+
+CONTRIB_MRGE_DEC : Fixation du montant mensuel de la contribution aux charges du mariage (515-11) ou de l'aide matérielle pour les PACS (515-11) dû par le défendeur
+0 – rejeté
+1 – accordé
+X – non statué
+
+CONTRIB_MRGE_DEC_MT : Montant mensuel de la contribution décidée par le juge
+
+ART_700_DEM_DEC : Paiement par le défendeur d'une somme au titre de l'article 700 du CPC (hors 515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ART_700_DEF_DEC : Paiement par le demandeur d'une somme au titre de l'article 700 du code de procédure civile (hors 515-11)
+0 – rejeté
+1 – accordé
+X – non statué
+
+ART_700_MT : Montant de la somme fixée au titre de l'article 700 du CPC
+
+AJ_PROV_DEM_DEC : Admission provisoire du demandeur à l'aide juridictionnelle (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+AJ_PROV_DEF_DEC : Admission provisoire du défendeur à l'aide juridictionnelle (515-11)
+0 – NON (ou non précisé)
+1 – OUI
+
+Onglet Bracelet Anti Rapprochement
+
+BAR_DEM : Le demandeur demande-t-il que le défendeur porte un barcelet anti rapprochement
+0 – NON (ou non précisé)
+1 – OUI
+
+BAR_POS : Position du défendeur vis à vis de la demande de bracelet anti-rapprochement
+0 – s'oppose
+1 – accepte
+X – non précisé
+
+BAR_DEF : Le défendeur fait-il une demande de port du bracelet anti-rapprochement (art 515-11-1)
+0 – NON (ou non précisé)
+1 – OUI
+
+BAR_PARQUET : Avis du parquet sur la demande de port du bracelet anti-rapprochement
+0 - Avis défavorable
+1 - Avis favorable
+2 - Avis formulé mais neutre
+X - Non renseigné
+
+BAR_PARQUET_REFUS : Si avis défavorable du parquet, pourquoi?
+1 - La situation médicale du défendeur ne le permet pas
+2 - Le danger n'est pas suffisamment caractérisé
+3 - Les lieux de domicile et de travail ne le permettent pas
+4 - Le bracelet a déjà été mis en œuvre dans une procédure pénale
+9 – autre
+X – Non Renseigné
+
+BAR_JAF : Décision du JAF sur la demande de port du bracelet anti-rapprochement
+0 – rejeté
+1 – accordé
+X – non statué
+
+BAR_JAF_REFUS : Si rejet du JAF, pourquoi ?
+1 - La situation médicale du défendeur ne le permet pas
+2 - Le danger n'est pas suffisamment caractérisé
+3 - Les lieux de domicile et de travail ne le permettent pas
+4 - Le bracelet a déjà été mis en œuvre dans une procédure pénale
+9 – autre
+X – Non Renseigné
+
+BAR_DUREE : Durée de la mesure de BAR prononcée, en mois
+
+BAR_DISTANCE : Distance de la zone d’alerte prononcée en km
